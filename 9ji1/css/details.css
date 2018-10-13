@@ -1,0 +1,156 @@
+#header{border-bottom: 2px solid #c80f1e;}
+#header .container .nav .navMenu{display: none;}
+#header .container .nav .navMenuCursor{display: block;}
+
+/*==========================================================*/
+
+#main .container .iweizhi {
+    height: 40px;
+    line-height: 40px;
+    font-family: SimSun;
+    background: url(../images/icon11.png) no-repeat left center;
+    padding-left: 22px;
+    overflow: hidden;
+}
+
+#main .container .shopinfo-img #bigPicBefore{overflow: hidden;position: relative;}
+#bigPicBefore .skin-jb{position: absolute;}
+#bigPicBefore .bigpic {width: 438px;height: 438px;margin-bottom: 5px;overflow: hidden;text-align: center;
+border: 1px solid #dfdfdf;}
+#bigPicBefore .bigpic a {display: block;}
+
+
+#bigPicBefore .shopimg-list {width: 440px;margin: 0 auto;text-align: center;overflow: hidden;}
+.leftpicbtn, .rightpicbtn {height: 70px;width: 18px;float: left;margin-top: 4px;cursor: pointer;text-align: center;}
+.leftpicbtn span {background: url(../images/sli_btn.png) no-repeat 0 0;display: block;width: 7px;height: 14px;margin-top: 29px;margin-left: 5px;}
+.rightpicbtn span {background: url(../images/sli_btn.png) no-repeat -7px 0;display: block;width: 7px;height: 14px;margin-top: 29px;margin-left: 5px;}
+
+
+.shopimg-list .smallbox {float: left;height: 80px;overflow: hidden;margin: 0 2px;}
+.smallpic li {border: solid 1px #e7e7e7;width: 70px !important;height: 70px;margin: 4px;cursor: pointer;opacity: .6;}
+.smallpic li a {display: block;width: 70px;height: 70px;}
+/*=======================================================*/
+#main .container .shopinfo-img .shop-id {margin: 15px 0 10px;}
+.fav-btn {
+    margin-left: 10px;
+    overflow: hidden;
+    color: #666;
+    cursor: pointer;
+}
+.fav-btn i {
+    width: 18px;
+    height: 18px;
+    background: url(../images/icon_goods.png) no-repeat;
+    float: left;
+}
+/*====================================================*/
+.fenxiang_box .bdshare-button-style0-16 {zoom: 1;}
+.bdshare-button-style0-16 a, .bdshare-button-style0-16 .bds_more {float: left;font-size: 12px;padding-left: 17px;line-height: 16px;height: 16px;
+	background-image: url(../images/icons_0_16.png);background-repeat: no-repeat;cursor: pointer;margin: 6px 6px 6px 0;
+}
+.bdshare-button-style0-16 .bds_weixin {
+    background-position: 0 -1612px;
+}
+.bdshare-button-style0-16 .bds_sqq {
+    background-position: 0 -2652px;
+}
+.bdshare-button-style0-16 .bds_qzone {
+    background-position: 0 -52px;
+}
+.bdshare-button-style0-16 .bds_tsina {
+    background-position: 0 -104px;
+}
+/*=============================================================*/
+#main .container .shopinfo {font-family: arial;color: #666;margin-left: 460px;}
+.shopinfo .shop-title {font-size: 16px;color: #666;padding-bottom: 5px;font-family: "microsoft yahei";}
+.shop-title  .new-kf a {font-size: 12px;color: #999;float: right;}
+.shop-title .shareEwm {float: left;position: relative;}
+.shareEwm .big-ewm {display: none;position: absolute;z-index: 9;top: 29px;left: -155px;
+    background: #fff;border: 1px solid #ddd;box-shadow: 0 0 5px #ddd;width: 385px;padding: 10px;border-radius: 3px;
+    font-family: 'Microsoft YaHei',SimHei;}
+.shareEwm .big-ewm > div {width: 240px;float: left;padding-top: 10px;}
+.shareEwm .big-ewm h4 {font-weight: 700;padding-bottom: 20px;color: #39f;font-size: 18px;
+	padding-right: 45px;background: url(../images/arrow_r_down.png) right top no-repeat;text-align: right;}
+.shareEwm .big-ewm-con {padding: 20px 70px 25px 10px;color: #666;
+	background: url(../images/share_phone.png) right top no-repeat;font-size: 14px;}
+.shareEwm .big-ewm img {width: 132px;height: 132px;padding: 10px 0 0 10px;float: left;}
+.shareEwm:hover .big-ewm{display: block;}
+
+.shopinfo .miaoshu {font-size: 13px;line-height: 20px;color: #c80f1e;margin-bottom: 10px;}
+
+.shopinfo .shop-price-bg {background: #f7f7f7;padding: 5px 0;overflow: hidden;min-height: 44px;}
+.shop-price-bg .shop-price {padding: 0 10px;font-size: 12px;position: relative;}
+.shop-price .pro-price {font-size: 18px;color: #c80f1e;}
+big {font-size: larger;}
+
+.shop-price .goodsEvaluation {position: absolute;right: 4px;top: 4px;}
+.goodsEvaluation dl {text-align: center;float: left;padding: 0 10px;border-right: 1px solid #ddd;}
+.goodsEvaluation dl:last-child {border-right: none;}
+
+
+.shopinfo .pro-info {line-height: 26px;padding: 0 10px;}
+.pro-info dt {float: left;width: 60px;color: #666;font-family: SimSun;}
+.pro-info dd {margin-left: 70px;}
+
+
+
+.shopinfo .xuan_box {padding: 0 10px;margin-top: 5px;}
+.xuan_box .yanse{padding-top: 5px;display: flex;}
+.yanse .pz_tit {width: 70px;height: 39px;font-size: 12px;color: #666;line-height: 39px;font-family: SimSun;}
+.yanse .ys_xuan{display: flex;flex-wrap: wrap;width: 650px;}
+.yanse .ys_xuan li {display: block;text-align: center;line-height: 36px;margin-right: 8px;margin-bottom: 8px;}
+.ys_xuan li>a {display: block;height: 36px;line-height: 36px;border: 1px solid #ddd;padding-right: 10px;white-space: nowrap;color: #44484c;}
+.ys_xuan li>a img {float: left;margin: 1px;}
+.ys_xuan li>a.yansecur {border: 1px solid #c80f1e;color: #c80f1e;text-decoration: none;
+    /* background: #fff url(/images/icon35.png?v=1) no-repeat right bottom; */}
+.ys_xuan li>a span {margin-left: 10px;}
+.taocan-list .taocan-detail {position: absolute;left: 0;top: 37px;z-index: 10;width: auto;padding: 5px 0;height: auto;min-width: 120px;background: #fff;border: 1px solid #c80f1e;display: none;text-align: left;}
+
+
+
+
+.xuan_box .dfengex {border-top: dotted 1px #dfdfdf;margin: 8px 0;}
+.kucun {color: #666;padding: 5px 0;}
+.kczt {min-height: 27px;color: #666;position: relative;}
+.kczt span {display: block;float: left;height: 25px;line-height: 25px;width: 60px;font-size: 12px;font-family: SimSun;}
+.kczt .ps_info {margin-left: 70px;}
+.ps_info b, .ps_info strong, .ps_info em {display: inline-block;height: 25px;line-height: 25px;color: #666;font-weight: normal;}
+.ps_info em {display: inline-block;height: 25px;line-height: 25px;color: #666;font-weight: normal;}
+.ck_kucun small {float: none;color: #c80f1e;font-size: 12px;font-weight: bold;}
+#lblTextKcState {padding-top: 8px;overflow: hidden;}
+.triangle-down {width: 0;height: 0;border-left: 5x solid transparent;border-right: 5px solid transparent;border-top: 7px solid #bbb;display: inline-block;vertical-align: middle;margin: 0 3px}
+.ps_info i {-webkit-transition: -webkit-transform 0.3s;transition: transform 0.3s;font-weight: 900;}
+
+
+.xuan_box .fuwu {margin: 15px 0 0;position: relative;}
+.fuwu span {color: #666;display: block;float: left;font-size: 12px;height: 26px;line-height: 26px;width: 60px;}
+.fuwu ul {margin-left: 10px;width: 650px;    display: inline-block;}
+.fuwu li {float: left;height: 26px;line-height: 24px;margin-right: 10px;margin-bottom: 10px;text-align: left;position: relative;}
+.fuwu a {border: 1px solid #ddd;float: left;height: 24px;padding-left: 6px;padding-right: 10px;color: #666;}
+.fuwu-list-box {position: absolute;top: 26px;left: 0;background: #fff;border: 1px solid #ddd;z-index: 1;min-width: 110px;display: none;}
+.fuwu-list-box a {border: 0;width: 85%;}
+.fuwu .fw_icon {margin: 4px 2px 0 0;height: 16px;width: 16px;display: block;float: left;}
+
+.fuwu-box:hover .fuwu-list-box{display: block;}
+
+/*=================================*/
+.fuwu a.a-link {border: 0;color: #7597dc;}
+
+/*==================================*/
+
+.buy_btnbox {margin-left: 70px;overflow: hidden;}
+.add_gwc {padding: 0 20px;height: 44px;border: 1px solid #666;margin: 5px 12px 0 0;display: inline-block;font-size: 16px;font-family: 'Microsoft YaHei';line-height: 44px;}
+.firstBtn {background: #c80f1e;border: 1px solid #c80f1e;color: #fff;}
+
+/*===============*/
+.buy-in-shop {font-family: 'Microsoft YaHei UI';display: none;margin: 10px;}
+.buy-in-shop dl {overflow: hidden;margin-top: 5px;}
+.buy-in-shop dl dt {float: left;width: 70px;height: 40px;line-height: 40px;text-align: right;}
+.buy-in-shop dl dd {margin-left: 80px;padding-top: 7px;}
+.buy-in-shop dl dd input {height: 26px;border: solid 1px #ccc;outline: none;border-radius: 2px;line-height: 26px\9;text-indent: 4px;}
+.buy-in-shop dl dd em {margin-left: 10px;color: #999;}
+.shop-info {border: solid 1px #dfdfdf;padding: 10px;width: 300px;display: block;}
+.shop-info h3 {overflow: hidden;margin-bottom: 5px;}
+.shop-info p {height: 18px;overflow: hidden;}
+/*===================*/
+#buyType {display: inline-block;}

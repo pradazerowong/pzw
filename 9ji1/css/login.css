@@ -1,0 +1,233 @@
+body{background: #f6f6f6;}
+.container{width: 960px;}
+
+/*=================================*/
+#main{background: #fff url("../images/login-bg.jpg") no-repeat center top;padding: 40px 0;margin-bottom: 20px;}
+#main .container .log_ad {
+    width: 600px;
+    float: left;
+    overflow: hidden;
+    height: 370px;
+}
+.login_border {
+    float: right;
+    background: rgba(255,255,255,.6);
+    padding: 8px;
+}
+.login_border .login {
+    width: 330px;
+    min-height: 334px;
+    padding-bottom: 20px;
+    background: #fff;
+    position: relative;
+}
+.login_border .login .register{position: absolute;
+    right: 30px;
+    top: 14px;}
+.login_border .login .register a em{    width: 16px;
+    height: 16px;
+    background: #999;
+    float: right;
+    color: #fff;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 16px;
+    margin: 1px 0 0 5px;
+    font-family: '宋体';
+    font-weight: bold;}
+.login_border .login .login-tab{overflow: hidden;
+    width: 310px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e7e7e7;
+    height: 46px;}
+.login_border .login .login-tab li {
+    float: left;
+    width: 60px;
+    text-align: center;
+    height: 45px;
+    margin: 0 10px;
+    line-height: 46px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+.login_border .login .login-tab .login-on {
+    color: #c80f1e;
+    font-size: 14px;
+    border-bottom: 1px solid #c80f1e !important;
+}
+.login_border .login .login-body{    padding: 5px 30px 0;
+    overflow: hidden;}
+.login_border .login .login-body .login-style:last-of-type{display: none;}
+.login_border  .login dl {
+    margin-top: 20px;
+}
+.login input {
+    font-family: 'Microsoft YaHei';
+    outline: none;
+}
+.login dl input[type=text], .login dl input[type=password] {
+    border: solid 1px #d6d6d6;
+    height: 34px;
+    line-height: 28px\9;
+    width: 233px;
+    padding-left: 35px;
+    border-radius: 3px;
+}
+.login dl dt #txtUser {
+    background: url(../images/txtuser.png) no-repeat 7px center;
+    background-size: 20px;
+}
+.login dl dt #Userpwd {
+    background: url(../images/userpwd.png) no-repeat 7px center;
+    background-size: 20px;
+}
+.login:first-of-type dl dd{display: none;color: #c80f1e;}
+.login dl dd #phone {
+    background: url(../images/phone.png) no-repeat 6px center;
+    background-size: 22px;
+}
+#dynamicPWD {
+    background: url(../images/dynamicpwd.png) no-repeat 6px center;
+    background-size: 22px;width: 133px;
+}
+#logincode{display: none;}
+#txtCode, #txtCode2 {
+    background: url(../images/txtcode.png) no-repeat 6px center;
+    background-size: 22px;
+    width: 133px;
+    margin-right: 10px;
+}
+
+
+#vCodeImg{vertical-align: middle;
+    margin-top: -4px;}
+#Img1{    width: 90px;
+    height: 34px;}
+.login_border .login .login-body .login-style .psword{margin-top: 15px;}
+.remember {
+    margin-top: 15px;
+}
+.remember input[type=checkbox] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.remember label {
+    color: #999;
+}
+.tishi {
+	display: none;
+    line-height: 26px;
+    color: #c80f1e;
+    margin-top: 10px;
+}
+.login #logbtn,.login #dynamicLogon{
+    width: 270px;
+    border: 0;
+    background: #c80f1e;
+    border-radius: 3px;
+    height: 40px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+}
+.btn_mfyzm {
+    width: 90px;
+    margin-left: 10px;
+    height: 36px;
+    background: #f0f0f0;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.hezuo {
+    margin-top: 15px;
+    padding: 0 30px;
+}
+.hezuo h3 {
+    color: #999;
+    margin-bottom: 10px;
+}
+.hezuo p a {
+    display: inline-block;
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    background: #f3f3f3;
+    border: solid 1px #e3e3e3;
+    border-radius: 3px;
+    margin-right: 10px;
+    text-shadow: 0 1px 0 #fff;
+}
+.hezuo p a i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url(../images/log_icon.png) no-repeat;
+}
+.hezuo p a i.wx {
+    background-position: 0 0;
+}
+.hezuo p a i.qq {
+    background-position: -16px 0;
+}
+.qiehuan {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../images/login-code.png) no-repeat right top;
+    cursor: pointer;
+}
+
+.login_border .login:last-of-type{display: none;}
+.login_border .login:last-of-type{background-position: left bottom;}
+.app_login {
+    position: relative;
+    padding: 35px 50px 0;
+}
+.app_login h1 {
+    text-align: center;
+    background: #ffebeb;
+    color: #e4393c;
+    border: 1px solid #FFAEAF;
+    padding-left: 25px;
+    line-height: 32px;
+    display: none;
+}
+.app_login h2 {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    color: #888;
+    line-height: 32px;
+}
+.app_code {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    width: 155px;
+    margin: 15px auto;
+    font-size: 0;
+}
+.app_code img {
+    width: 100%;
+    height: 100%;
+}
+.shuaxin {
+    text-align: center;
+}
+.shuaxin span {
+    padding: 0 10px;
+    width: 155px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+    background: #c80f1e;
+    color: #fff;
+    margin-bottom: 8px;
+}

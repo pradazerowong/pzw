@@ -1,0 +1,121 @@
+body{background: #f6f6f6;}
+.container{width: 960px;}
+
+
+#main .container{
+    background: #fff url(../images/reg_bg.png) no-repeat right center;
+    border: solid 8px #f0f0f0;
+    min-height: 340px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+.regtab{
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    background: #eee;
+    display: inline-block;
+    font-family: 'Microsoft YaHei';
+}
+.regtab li {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-right: solid 1px #ddd;
+}
+.regtab .xz {
+    border-top: solid 2px #c80f1e;
+    font-size: 16px;
+    color: #666;
+    background: #fff;
+}
+
+/*=======================*/
+.regtip {
+    margin: 10px 10px 0 0;
+    text-shadow: 0 1px 0 #fff;
+}
+.regtip a {
+    background: #9c3;
+    color: #fff;
+    margin-left: 5px;
+    padding: 2px;
+    text-shadow: none;
+}
+/*=======================*/
+.regcontain .reg:first-of-type{display: none;}
+.reg dl {
+    line-height: 30px;
+    margin-top: 15px;
+    min-height: 30px;
+}
+.reg dl dt {
+    color: #999;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    width: 100px;
+}
+.reg dl dd {
+    margin-left: 110px;
+}
+.reg dl dt i {
+    color: #f33;
+}
+
+.reg dl dd input[type=text], .reg dl dd input[type=password] {
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 2px #f3f3f3;
+    height: 28px;
+    line-height: 28px\9;
+    text-indent: 5px;
+    width: 240px;
+}
+.reg dl dd #yzmcode,.reg dl dd #phonecode,.reg dl dd #yzmcode2,.reg dl dd #phonecode2{width: 120px;}
+.reg dl dd #vCodeImg{    margin: 0 10px;
+    vertical-align: middle;width: 80px;
+    height: 30px;}
+.reg dl dd #vCodeImg2{    margin: 0 10px;
+    vertical-align: -10;width: 80px;
+    height: 30px;}    
+.reg dl dd #mmprovision,.reg dl dd #mmprovision2{margin-right: 5px;
+    vertical-align: middle;}
+.reg dl dd label[for=#mmprovision],.reg dl dd label[for=#mmprovision2]{color: #999;}
+.reg dl dd label[for=#mmprovision] a,.reg dl dd label[for=#mmprovision2] a{color: #39f;
+    margin: 0 5px;}
+
+.reg dl dd em {
+    color: #999;
+    margin-left: 10px;
+}
+
+.reg dl dd input[type=button] {
+    background: #c80f1e;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+    width: 160px;
+}
+
+/*===========================*/
+.btn {
+    margin-left: 10px;
+    border: 1px solid #dddddd;
+    padding: 0;
+    width: 106px;
+    height: 30px;
+    background: #f4f4f4;
+    margin-top: 0;
+    text-align: center;
+    line-height: 30px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+}

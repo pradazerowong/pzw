@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/index.css">
+	
+	<script src="lib/jquery-3.2.1.js"></script>
+	<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		$.ajax({
+			url:"api/cart.php",
+			type:"post",
+			dataType:"json",
+			success: succFunction11
+		})
+		function succFunction11(data){
+			console.log(data);
+			cartRender(data);
+		}
+	</script>
+
+</head>
+<body>
+	<div id="jiuji">
+		<div id="topad">
+			<div class="container">
+				<a href="#">
+					<img src="images/topad.png" alt="">
+				</a>
+				<i class="close">&times;</i>
+			</div>
+		</div>
+
+		<div id="top">
+			<div class="container clearfix">
+				<div class="location fl">
+					<i></i>
+				</div>
+				<div class="login fl">
+					<p>Hi，欢迎来九机！<a href="html/login.html">登录</a><a href="html/register.html">免费注册</a></p>
+				</div>
+				<ul class="menu fr">
+					<li>
+						<a href="#">个人中心<i></i></a>
+						<ul class="userCenter">
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的积分</a></li>
+							<li><a href="#">我的试用</a></li>
+							<li><a href="#">我的收藏</a></li>
+							<li><a href="#">我的咨询</a></li>
+							<li><a href="#">我的优惠券</a></li>
+							<li><a href="#">报修/退换货</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i></i>会员俱乐部</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li>
+						<a href="#"><i></i>客户端</a>
+						<dl class="appDown">
+				            <dt>
+				            	<a href="#">
+				            		<img src="images/appdown.png" width="100" height="100" />
+				            	</a>
+				            	<span>扫描二维码下载</span>
+				            </dt>
+				            <dd>
+				                <a href="" target="_blank" title="下载安卓客户端">Android</a>
+				                <a href="" target="_blank" title="下载iPhone客户端">iPhone</a>
+				                <a href="" target="_blank" title="访问触屏版">触屏版</a>
+				            </dd>
+				        </dl>
+					</li>
+					<li><a href="#">在线客服</a></li>
+					<li>
+						<a href="#">网站导航<i></i></a>
+						<ul class="siteMap">
+			                <li class="character">
+			                    <h3>九机特色</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="">附近门店</a></li>
+			                        <li><a href="">一手优品</a></li>
+			                        <li><a href="">免费贴膜<i class="hot-icon"></i></a></li>
+			                        <li><a href="">旧机回收</a></li>
+			                        <li><a href="">预约维修</a></li>
+			                        <li><a href="">预约快修</a></li>
+			                        <li><a href="">九机小店</a></li>
+			                    </ul>
+			                </li>
+			                <li class="service">
+			                    <h3>服务集市</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">在线支付</a></li>
+			                        <li><a href="#">话费充值</a></li>
+			                        <li><a href="#">品牌专区</a></li>
+			                        <li><a href="#">试用中心</a></li>
+			                        <li><a href="#">帮助中心</a></li>
+			                        <li><a href="#">九机服务</a></li>
+			                        <li><a href="#">会员俱乐部<i class="hot-icon"></i></a></li>
+			                    </ul>
+			                </li>
+			                <li class="join">
+			                    <h3>招商合作</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">供应商申请</a></li>
+			                        <li><a href="#">IT服务</a></li>
+			                        <li><a href="#">九机百科</a></li>
+			                    </ul>
+			                </li>
+			                <li class="more">
+			                    <h3>更多精选</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">九机头条</a>
+			                        <li><a href="#">人才招聘</a>
+			                    </ul>
+			                </li>
+			                <li class="product">
+			                    <h3>产品选择</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">手机</a></li>
+			                        <li><a href="#">手机配件<i class="hot-icon"></i></a></li>
+			                        <li><a href="#">电脑周边</a></li>
+			                        <li><a href="#">耳机音响</a></li>
+			                        <li><a href="#">智能产品<i class="new-icon"></i></a></li>
+			                        <li><a href="#">笔记本/电脑</a></li>
+			                    </ul>
+			                </li>
+				        </ul>
+					</li>
+					<li><a href="#"><i></i>不良信息举报</a></li>
+					<li>
+						<a href="#"><i></i>400-008-3939</a>
+						<div class="freePhone">
+			            	<p>输入手机号码并<span>免费</span>拨打：</p><input type="text" id="freePhoneNum"/><input type="button" id="freePhoneBtn" value="拨打">
+			        	</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="header">
+			<div class="container clearfix">
+				<div class="logoBox fl">
+					<h1><a href="#" title="九机网">
+	                <img src="images/logo.png" alt="九机网"/></a></h1>
+				</div>
+				<div class="search fl">
+					<form action="/search" method="get" class="searchForm">
+		                <input class="searchBox" name="w" type="text" id="searchbox" placeholder="iPhone XS" value="" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" maxlength="50" />
+		                <!-- <input type="hidden" value="" name="pId" />
+		                <input type="hidden" value="ASP.index_aspx" />
+		                <input type="hidden" value="False" /> -->
+		                <input name="" type="submit" class="searchBtn" value="搜索" />
+	            	</form>
+	            	<dl class="searchHistory">
+		                <dt>搜索历史：</dt>
+		                <dd class="searchHistoryList"><a href="">iphone</a><a href="">6s</a></dd>
+		                <dd><a href="javascript:;" style="color:#3caaff;border-bottom:0;">清空历史记录</a></dd>
+		            </dl>
+		            <div class="searchGuess"></div>
+		            <p> 热门搜索：
+						<a href="/search?w=iPhone XS">iPhone XS</a>
+						<a href="/search?w=荣耀8X">荣耀8X</a>
+						<a href="/search?w=vivo X23">vivo X23</a>
+						<a href="/search?w=OPPO R17">OPPO R17</a>
+						<a href="/search?w=nova 3">nova 3</a>
+						<a href="/search?w=华为 P20">华为 P20</a>
+						<a href="/search?w=小米8">小米8</a>
+						<a href="/search?w=数据线">数据线</a>
+						<a href="/search?w=MAC">MAC</a>
+						<a href="/search?w=九机定制膜">九机定制膜</a>
+						<a href="/search?w=小米ai音响">小米ai音响</a>
+					</p>
+		        </div>
+
+		            <div class="cart fr">
+		                <a href="#">
+		                    购物车
+		                    <span></span>
+		                </a>
+		                <div class="cartList">
+		                    <div class="cart-box">
+		                    	<div class="cart-item-parent">
+		             				
+		                    	</div>
+		                    	<div class="cart-mini-total">
+        							<p>共<span></span>件商品，总计：<b>zongjia</b></p>
+        							<a href="">去结算</a>
+        						</div>
+		                    </div>
+		                </div>
+		            </div>  
+	  
+		        <div class="nav">
+		        	<div class="container">
+		        		<h3 class="navMenuCursor">全部商品分类</h3>
+				        <ul class="navMenu">
+				        	<li>
+				        		<b><i></i><a href="html/list.html">手机通讯</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="iPhone XS" href="#">iPhone XS</a>
+				        			<a title="小米8屏幕指纹版" href="#">小米8屏幕指纹版</a> 
+				        			<a title="OPPO R17" href="#">OPPO R17</a> 
+				        			<a title="vivo X23" href="#">vivo X23</a> 
+				        			<a title="华为nova 3" href="#">华为nova 3</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="苹果" href="#">苹果</a>
+				                                <a title="华为" href="#">华为</a>
+				                                <a title="荣耀" href="#">荣耀</a>
+				                                <a title="小米" href="#">小米</a>
+				                                <a title="三星" href="#">三星</a>
+				                                <a title="OPPO" href="#">OPPO</a>
+				                                <a title="vivo" href="#">vivo</a>
+				                                <a title="美图" href="#">美图</a>
+				                                <a title="魅族" href="#">魅族</a>
+				                                <a title="一加" href="#">一加</a>
+				                                <a title="锤子" href="#">锤子</a>
+				                                <a title="360" href="#">360</a>
+				                                <a title="努比亚" href="#">努比亚</a>
+				                                <a title="全部手机" href="#">全部手机</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>价位</h4>
+				                            <p>
+				                            	<a title="0-599" href="#">0-599</a>
+				                                <a title="600-999" href="#">600-999</a>
+				                                <a title="1000-1999" href="#">1000-1999</a>
+				                                <a title="2000-2999" href="#">2000-2999</a>
+				                                <a title="3000-3999" href="#">3000-3999</a>
+				                                <a title="4000-4999" href="#">4000-4999</a>
+				                                <a title="5000以上" href="#">5000以上</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>网络制式</h4>
+				                            <p>
+				                                <a title="全网通" href="#">全网通</a>
+				                                <a title="4G+全网通" href="#">4G+全网通</a>
+				                                <a title="移动/联通双4G" href="#">移动/联通双4G</a>
+				                                <a title="联通4G" href="#">联通4G</a>
+				                                <a title="电信4G" href="#">电信4G</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>产品特点</h4>
+					                            <p>
+					                                <a title="快速充电" href="#">快速充电</a>
+					                                <a title="指纹识别" href="#">指纹识别</a>
+					                                <a title="拍照神器" href="#">拍照神器</a>
+					                                <a title="双卡双待" href="#">双卡双待</a>
+					                                <a title="女性手机" href="#">女性手机</a>
+					                                <a title="老人手机" href="#">老人手机</a>
+					                                <a title="全面屏" href="#">全面屏</a>
+					                                <a title="面部识别解锁" href="#">面部识别解锁</a>
+					                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>热销机型</h4>
+				                            <p>
+				                                <a title="iPhone X" href="#">iPhone X</a>
+				                                <a title="iPhone 8 Plus" href="#">iPhone 8 Plus</a>
+				                                <a title="华为 nova 3" href="#">华为 nova 3</a>
+				                                <a title="荣耀10" href="#">荣耀10</a>
+				                                <a title="iPhone 6s Plus" href="#">iPhone 6s Plus</a>
+				                                <a title="iPhone6" href="#">iPhone6</a>
+				                                <a title="OPPO R17" href="#">OPPO R17</a>
+				                                <a title="华为 P20" href="#">华为 P20</a>
+				                                <a title="三星 Note9" href="#">三星 Note9</a>
+				                                <a title="vivo x21" href="#">vivo x21</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>售后维修</h4>
+				                            <p>
+				                                <a title="手机维修" href="#">手机维修</a>
+				                                <a title="维修配件价格" href="#">维修配件价格</a>
+				                                <a title="九机服务" href="#">九机服务</a>
+				                                <a title="苹果电池快修" href="#">苹果电池快修</a>
+				                                <a title="苹果显示屏快修" href="#">苹果显示屏快修</a>
+				                            </p>
+					        			</li>
+				        			</ul>
+			                        <div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="images/nav01.jpg"/></a>
+		                                <a href="#" title=""><img src="images/nav02.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">智能家居</a>/<a href="#">智能健康</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="智能电视" href="#">智能电视</a> 
+				        			<a title="电视盒子" href="#">电视盒子</a> 
+				        			<a title="智能门锁" href="#">智能门锁</a> 
+				        			<a title="监控摄像头" href="#">监控摄像头</a> 
+				        			<a title="公牛插座" href="#">公牛插座</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="荣耀" href="">荣耀</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="乐心" href="">乐心</a>
+				                                <a title="公牛" href="">公牛</a>
+				                                <a title="Lifesmart" href="">Lifesmart</a>
+				                                <a title="南极人" href="">南极人</a>
+				                                <a title="飞利浦" href="">飞利浦</a>
+				                                <a title="萤石" href="">萤石</a>
+				                                <a title="睿量" href="">睿量</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="生活周边" href="#">生活周边</a></h4>
+				                            <p>
+				                                <a title="路由器" href="">路由器</a>
+				                                <a title="智能插座" href="">智能插座</a>
+				                                <a title="打火机" href="">打火机</a>
+				                                <a title="手机支架" href="">手机支架</a>
+				                                <a title="电池" href="">电池</a>
+				                                <a title="闹钟" href="">闹钟</a>
+				                                <a title="其他" href="">其他</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能小电" href="">智能小电</a></h4>
+				                            <p>
+				                                <a title="灯光照明" href="">灯光照明</a>
+				                                <a title="加湿器" href="">加湿器</a>
+				                                <a title="厨房小电" href="">厨房小电</a>
+				                                <a title="扫地机" href="">扫地机</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="电视盒子" href="">电视盒子</a></h4>
+				                            <p>
+				                                <a title="小米盒子" href="">小米盒子</a>
+				                                <a title="荣耀盒子" href="">荣耀盒子</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能电视" href="">智能电视</a></h4>
+				                            <p>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="索尼" href="">索尼</a> 
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="健康护理" href="">健康护理</a></h4>
+				                            <p>
+				                                <a title="电动牙刷" href="">电动牙刷</a>
+				                                <a title="美妆个护" href="">美妆个护</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="按摩设备" href="">按摩设备</a></h4>
+				                            <p>
+				                                <a title="肩部按摩" href="">肩部按摩</a>
+				                                <a title="按摩枪" href="">按摩枪</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能安防" href="">智能安防</a></h4>
+					                            <p>
+					                                <a title="智能门锁" href="">智能门锁</a>
+					                                <a title="监控摄像头" href="">监控摄像头</a>
+					                                <a title="电子猫眼/门铃" href="">电子猫眼/门铃</a>
+					                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能门锁" href="">智能门锁</a></h4>
+				                            <p>
+				                                <a title="凯迪仕" href="">凯迪仕</a>
+				                                <a title="LifeSmart" href="">LifeSmart</a>
+				                                <a title="九万里" href="">九万里</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="images/nav03.jpg"/></a>
+		                                <a href="#" title=""><img src="images/nav04.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">智能穿戴</a>/<a href="#">智能出行</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="智能手环" href="">智能手环</a> 
+				        			<a title="儿童手表" href="">儿童手表</a> 
+				        			<a title="智能手表" href="">智能手表</a> 
+				        			<a title="电动车" href="">电动车</a> 
+				        			<a title="行车记录仪" href="">行车记录仪</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="小天才" href="">小天才</a>
+				                                <a title="AMAZFIT" href="">AMAZFIT</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="公牛" href="">公牛</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能手表" href="">智能手表</a></h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="AMAZFIT" href="">AMAZFIT</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="Ticwatch" href="">Ticwatch</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能手环" href="">智能手环</a></h4>
+				                            <p>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="荣耀" href="">荣耀</a>
+				                                <a title="AMAZFIT" href="">AMAZFIT</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="儿童手表" href="">儿童手表</a></h4>
+				                            <p>
+				                                <a title="小天才" href="">小天才</a>
+				                                <a title="糖猫" href="">糖猫</a>
+				                                <a title="小米" href="">小米</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="相机" href="">相机</a></h4>
+				                            <p>
+				                                <a title="Gopro" href="">Gopro</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能车载" href="">智能车载</a></h4>
+				                            <p>
+				                                <a title="车载蓝牙" href="">车载蓝牙</a>
+				                                <a title="车载充电器" href="">车载充电器</a>
+				                                <a title="车载支架" href="">车载支架</a>
+				                                <a title="行车记录仪" href="">行车记录仪</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="平衡车" href="">平衡车</a></h4>
+				                            <p>
+				                                <a title="小米平衡车" href="">小米平衡车</a>
+				                                <a title="小米九号Plus" href="">小米九号Plus</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="电动车" href="">电动车</a></h4>
+				                            <p>
+				                                <a title="电动车" href="">电动车</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="images/nav05.jpg"/></a>
+		                                <a href="#" title=""><img src="images/nav06.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">手机配件</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="保护壳" href="">保护壳</a> 
+				        			<a title="移动电源" href="">移动电源</a> 
+				        			<a title="手机耳机" href="">手机耳机</a> 
+				        			<a title="钢化膜" href="">钢化膜</a> 
+				        			<a title="数据线" href="">数据线</a> 
+				        			<a title="充电器" href="">充电器</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4><a title="保护壳" href="">保护壳</a></h4>
+				                            <p>
+				                                <a title="苹果保护壳" href="">苹果保护壳</a>
+				                                <a title="华为保护壳" href="">华为保护壳</a>
+				                                <a title="荣耀保护壳" href="">荣耀保护壳</a>
+				                                <a title="三星保护壳" href="">三星保护壳</a>
+				                                <a title="OPPO保护壳" href="">OPPO保护壳</a>
+				                                <a title="vivo保护壳" href="">vivo保护壳</a>
+				                                <a title="小米保护壳" href="">小米保护壳</a>
+				                                <a title="魅族保护壳" href="">魅族保护壳</a>
+				                                <a title="平板保护壳" href="">平板保护壳</a>
+				                                <a title="其他" href="">其他</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="保护膜" href="">保护膜</a></h4>
+				                            <p>
+				                                <a title="苹果保护膜" href="">苹果保护膜</a>
+				                                <a title="华为保护膜" href="">华为保护膜</a>
+				                                <a title="荣耀保护膜" href="">荣耀保护膜</a>
+				                                <a title="三星保护膜" href="">三星保护膜</a>
+				                                <a title="OPPO保护膜" href="">OPPO保护膜</a>
+				                                <a title="vivo保护膜" href="">vivo保护膜</a>
+				                                <a title="小米保护膜" href="">小米保护膜</a>
+				                                <a title="魅族保护膜" href="">魅族保护膜</a>
+				                                <a title="平板保护膜" href="">平板保护膜</a>
+				                                <a title="其他" href="">其他</a>  
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="数据线" href="">数据线</a></h4>
+				                            <p>
+				                                <a title="苹果数据线" href="">苹果数据线</a>
+				                                <a title="MFI认证线" href="">MFI认证线</a>
+				                                <a title="安卓Type-C数据线" href="">安卓Type-C数据线</a>
+				                                <a title="安卓Micro数据线" href="">安卓Micro数据线</a>
+				                                <a title="多合一数据线" href="">多合一数据线</a>
+				                                <a title="转接头" href="">转接头</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="移动电源" href="">移动电源</a></h4>
+				                            <p>
+				                                <a title="超轻薄" href="">超轻薄</a>
+				                                <a title="自带线" href="">自带线</a>
+				                                <a title="无线输出" href="">无线输出</a>
+				                                <a title="苹果输入" href="">苹果输入</a>
+				                                <a title="Type-C输入" href="">Type-C输入</a>
+				                                <a title="安卓Micro输入" href="">安卓Micro输入</a>
+				                                <a title="双向快充" href="">双向快充</a>
+				                                <a title="单口输出" href="">单口输出</a>
+				                                <a title="多口输出" href="">多口输出</a>
+				                                <a title="自带插头" href="">自带插头</a>
+				                                <a title="电量数字显示" href="">电量数字显示</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="充电器" href="">充电器</a></h4>
+				                            <p>
+				                                <a title="无线充电器" href="">无线充电器</a>
+				                                <a title="快充充电器" href="">快充充电器</a>
+				                                <a title="多口充电器" href="">多口充电器</a>
+				                                <a title="单口充电器" href="">单口充电器</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="手机耳机" href="">手机耳机</a></h4>
+				                            <p>
+				                                <a title="苹果耳机" href="">苹果耳机</a>
+				                                <a title="华为耳机" href="">华为耳机</a>
+				                                <a title="荣耀耳机" href="">荣耀耳机</a>
+				                                <a title="小米耳机" href="">小米耳机</a>
+				                                <a title="三星耳机" href="">三星耳机</a>
+				                                <a title="魅族耳机" href="">魅族耳机</a>
+				                                <a title="OPPO耳机" href="">OPPO耳机</a>
+				                            </p>
+				        				</li>
+					        			<li>
+					        				<h4><a title="存储" href="">存储</a></h4>
+				                            <p>
+				                                <a title="三星存储卡" href="">三星存储卡</a>
+				                                <a title="金士顿存储卡" href="">金士顿存储卡</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="images/nav07.jpg"/></a>
+		                                <a href="#" title=""><img src="images/nav08.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">电脑办公</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="iPad" href="">iPad</a> 
+				        			<a title="游戏本" href="">游戏本</a> 
+				        			<a title="游戏外设" href="">游戏外设</a> 
+				        			<a title="小米电脑" href="">小米电脑</a> 
+				        			<a title="苹果电脑" href="">苹果电脑</a> 
+				        			<a title="200M路由" href="">200M路由</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>电脑</h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华硕" href="">华硕</a>
+				                                <a title="联想" href="">联想</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="戴尔" href="">戴尔</a>
+				                                <a title="微软" href="">微软</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="神舟" href="">神舟</a>
+				                                <a title="惠普" href="">惠普</a>
+				                                <a title="一体机" href="">一体机</a>
+				                                <a title="品牌台式机" href="">品牌台式机</a>
+				                                <a title="显示器" href="">显示器</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>平板</h4>
+				                            <p> 
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="微软" href="">微软</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="亚马逊" href="">亚马逊</a>
+				                                <a title="联想" href="">联想</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="外设产品" href="">外设产品</a></h4>
+				                            <p>
+				                                <a title="鼠标" href="">鼠标</a>
+				                                <a title="键盘" href="">键盘</a>
+				                                <a title="键鼠套" href="">键鼠套</a>
+				                                <a title="U盘" href="">U盘</a>
+				                                <a title="移动硬盘" href="">移动硬盘</a>
+				                                <a title="鼠标垫" href="">鼠标垫</a>
+				                                <a title="转接线" href="">转接线</a>
+				                                <a title="适配器" href="">适配器</a>
+				                                <a title="保护膜" href="">保护膜</a>
+				                                <a title="散热器" href="">散热器</a>
+				                                <a title="防辐射眼镜" href="">防辐射眼镜</a>
+				                                <a title="电脑包" href="">电脑包</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="网络产品" href="">网络产品</a></h4>
+				                            <p> 
+				                                <a title="路由器" href="">路由器</a>
+				                                <a title="无线接收装置" href="">无线接收装置</a>
+				                                <a title="网线" href="">网线</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4 class="orange"><a title="办公设备" href="">办公设备</a></h4>
+				                            <p>
+				                                <a title="投影仪" href="">投影仪</a>
+				                                <a title="投影仪配件" href="">投影仪配件</a>
+				                                <a title="打印机" href="">打印机</a>
+				                                <a title="办公耗材" href="">办公耗材</a>
+				                                <a title="更多" href="">更多</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="服务产品" href="">服务产品</a></h4>
+				                            <p>
+				                                <a title="九机上门" href="">九机上门</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="images/nav09.jpg"/></a>
+		                                <a href="#" title=""><img src="images/nav10.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">时尚影音</a>/<a href="#">娱乐竞技</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="Beats" href="">Beats</a> 
+				        			<a title="益智玩具" href="">益智玩具</a> 
+				        			<a title="JBL" href="">JBL</a> 
+				        			<a title="运动相机" href="">运动相机</a> 
+				        			<a title="拍立得" href="">拍立得</a> 
+				        			<a title="无人机" href="">无人机</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="Beats" href="">Beats</a>
+				                                <a title="JBL" href="">JBL</a>
+				                                <a title="哈曼卡顿" href="">哈曼卡顿</a>
+				                                <a title="B&O" href="">B&amp;O</a>
+				                                <a title="Bose" href="">Bose</a>
+				                                <a title="漫步者" href="">漫步者</a>
+				                                <a title="索尼" href="">索尼</a>
+				                                <a title="捷波朗" href="">捷波朗</a>
+				                                <a title="大疆" href="">大疆</a>
+				                                <a title="盈佳" href="">盈佳</a>
+				                                <a title="新游" href="">新游</a>
+				                                <a title="富士" href="">富士</a>
+				                                <a title="GoPro" href="">GoPro</a> 
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4 class="orange"><a title="耳机耳麦" href="">耳机耳麦</a></h4>
+				                            <p>
+				                                <a title="Beats" href="">Beats</a>
+				                                <a title="SONY" href="">SONY</a>
+				                                <a title="JBL" href="">JBL</a>
+				                                <a title="魔声" href="">魔声</a>
+				                                <a title="B&O" href="">B&amp;O</a>
+				                                <a title="华为" href="">华为</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="音箱/音响" href="">音箱/音响</a></h4>
+				                            <p>
+				                                <a title="JBL" href="">JBL</a>
+				                                <a title="哈曼卡顿" href="">哈曼卡顿</a>
+				                                <a title="漫步者" href="">漫步者</a>
+				                                <a title="Bose" href="">Bose</a>
+				                                <a title="SONY" href="">SONY</a>
+				                                <a title="B&O" href="">B&amp;O</a>
+				                                <a title="猫王" href="">猫王</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="蓝牙耳机" href="">蓝牙耳机</a></h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="捷波朗" href="">捷波朗</a>
+				                                <a title="小米" href="">小米</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="数码音频" href="">数码音频</a></h4>
+				                            <p>
+				                                <a title="运动相机" href="">运动相机</a>
+				                                <a title="拍立得" href="">拍立得</a>
+				                                <a title="音频播放器" href="">音频播放器</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="无人机" href="">无人机</a></h4>
+				                            <p>
+				                                <a title="精灵4系列" href="">精灵4系列</a>
+				                                <a title="大疆御" href="">大疆御</a>
+				                                <a title="大疆悟" href="">大疆悟</a>
+				                                <a title="大疆云台" href="">大疆云台</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="益智娱乐" href="">益智娱乐</a></h4>
+				                            <p>
+				                                <a title="儿童玩具" href="">儿童玩具</a>
+				                                <a title="游戏手柄" href="">游戏手柄</a>
+				                                <a title="减压娱乐" href="">减压娱乐</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="全景相机" href="">全景相机</a></h4>
+				                            <p>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="荣耀" href="">荣耀</a>
+				                                <a title="三星" href="">三星</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="images/nav11.jpg"/></a>
+		                                <a href="#" title=""><img src="images/nav12.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        </ul>
+				        <ul class="navBar">
+				            <li><a href="#">首页</a></li>
+				            <li><a href="#" target="_blank" rel="nofollow">旧机回收</a></li>
+				            <li><a href="#" target="_blank" rel="nofollow">一手优品</a></li>
+				            <li><a href="#" target="_blank">二手良品</a></li>
+				            <li class="subnav">
+				                <a href="#" target="_blank" class="navsh" rel="nofollow">售后维修</a>
+				                <ul>
+				                	<li><a target="_blank" href="#">售后公告</a></li>
+				                    <li><a target="_blank" href="#">常见问题</a></li>
+				                </ul>
+				            </li>
+
+				            <li class="subnav">
+				                <a href="/news/" target="_blank" class="navzx">九机头条</a>
+				                <ul>
+				                    <li><a target="_blank" href="#">行业资讯</a></li>
+				                    <li><a target="_blank" href="#">数码评测</a></li>
+				                    <li><a target="_blank" href="#">手机导购</a></li>
+				                </ul>
+				            </li>
+				           	<li class="subnav"><a title="九机小店" href="#" target="_blank">九机小店</a></li>
+				            <li><a href="#">人气排行</a></li>
+				        </ul>
+		        	</div>
+		        </div>
+			</div>
+		</div>
+		
+		<div id="banner">
+			<div class="container">
+				<div class="bannerBox">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  	<!-- Indicators -->
+					  	<ol class="carousel-indicators">
+					    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					    	<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					    	<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+					    	<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+					  	</ol>
+
+						  <!-- Wrapper for slides -->
+					  	<div class="carousel-inner" role="listbox">
+					    	<div class="item active">
+					      		<img src="images/banner01.jpg">
+							    <!-- <div class="carousel-caption">
+							        ...
+							    </div> -->
+					    	</div>
+					    	<div class="item">
+					      		
+					      		<img src="images/banner02.jpg">
+					      		
+					      		<!-- <div class="carousel-caption">
+					        		...
+					      		</div> -->
+					   		</div>
+					    	<div class="item">
+					      		<img src="images/banner03.jpg">
+					   		</div>
+					   		<div class="item">
+					      		<img src="images/banner04.jpg">
+					   		</div>
+					   		<div class="item">
+					      		<img src="images/banner05.jpg">
+					   		</div>
+					   		<div class="item">
+					      		<img src="images/banner06.jpg">
+					   		</div>
+					  	</div>
+
+				  		<!-- Controls -->
+				  		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    		<span class="sr-only">Previous</span>
+				  		</a>
+				  		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    		<span class="sr-only">Next</span>
+				  		</a>
+					</div>
+				</div>
+				<div class="sideBox">
+					<div class="userLogin">
+	                    <dl>
+	                        <dt><a href="" target="_blank"><img id="userPic" src="images/bannerlogin.png" /></a></dt>
+	                        <dd id="userInfo">
+	                            <p>九机网欢迎您～</p>
+	                            <a href="">登录</a>&nbsp;
+	                            <a href="">注册</a>
+	                        </dd>
+	                    </dl>
+	                    <div class="loginText">
+	                    	<a href="" target="_blank">领取新人礼包</a> 或前往 <a href="" target="_blank">会员俱乐部</a>
+	                    </div>
+	                </div>
+	                <div class="notice">
+	                    <h3 class="title">
+	                    	<a href="" target="_blank">九机头条</a>
+	                    	<span class="more">
+	                    		<a href="" target="_blank">更多 ></a>
+	                    	</span>
+	                    </h3>
+	                    <ul>
+                    
+                            <li><a href="" title="辟谣！关于iPhoneXS Max 双卡双待的说明"><i>[资讯]&nbsp;</i>辟谣！关于iPhoneXS Max 双卡双...</a></li>
+                        
+                            <li><a href="" title="新iPhone贵？买不到？最新购买攻略在这里"><i>[资讯]&nbsp;</i>新iPhone贵？买不到？最新购买攻...</a></li>
+                        
+                            <li><a href="" title="iOS 12正式版发布，功能更多速度更快！你还等什么？"><i>[资讯]&nbsp;</i>iOS 12正式版发布，功能更多速度...</a></li>
+	                            
+	                    </ul>
+	                </div>
+	                <div class="service">
+	                    <h3 class="title"><b>特色服务</b></h3>
+	                    <div class="serviceMenu clearfix">
+	                        <a href="" target="_blank"><i class="icon vip service-icon"></i><span>会员俱乐部</span></a>
+
+	                        <a href="" target="_blank"><i class="icon md service-icon"></i><span>门店查询</span></a>
+
+	                        <a href="" target="_blank""><i class="icon zt service-icon"></i><span>九机小店</span></a>
+
+	                        <a href="" target="_blank"><i class="icon sm service-icon"></i><span>九机上门</span></a>
+	                        
+	                        <a href="" target="_blank"><i class="icon hs service-icon" ></i><span>旧机回收</span></a>
+	                        <a href="" target="_blank"><i class="icon sy service-icon"></i><span>免费试用</span></a>
+	                        
+	                        <a href="" target="_blank"><i class="icon qd service-icon"></i><span>签到赚积分</span></a>
+	                        
+	                        <a href="" target="_blank"><i class="icon bx service-icon"></i><span>九机快修</span></a>
+
+	                        <a href="" target="_blank"><i class="icon yb service-icon"></i><span>延保/意外保</span></a>
+	                    </div>
+	                </div>
+				</div>
+			</div>
+		</div>
+		<script>
+			jQuery(function(){
+				$('.carousel').carousel();
+			})
+		</script>
+
+
+		<div id="main">
+			<div class="container">
+				<div id="go_troika">
+					<div class="troika-list">
+						<div class="troika-title">
+							<a href="html/list.html">
+								<img src="images/troika-title01.png" alt="">
+							</a>
+						</div>
+						<div class="troika-body">
+							<div class="fr">
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+							</div>
+							<div class="fl">
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+							</div>
+						</div>	
+					</div>
+					<div class="troika-list">
+						<div class="troika-title">
+							<a href="">
+								<img src="images/troika-title02.png" alt="">
+							</a>
+						</div>
+						<div class="troika-body">
+							<div class="fr">
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+							</div>
+							<div class="fl">
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+							</div>
+						</div>	
+					</div>
+					<div class="troika-list">
+						<div class="troika-title">
+							<a href="">
+								<img src="images/troika-title03.png" alt="">
+							</a>
+						</div>
+						<div class="troika-body">
+							<div class="fr">
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+							</div>
+							<div class="fl">
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+								<a href="" class="anim-left" target="detail">
+									<img src="images/troika01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>荣耀8X 全网通版</h3>
+										<p>千元旗舰 官网直降</p>
+									</div>
+								</a>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div id="go_shouhou" class="diy-shouhou clearfix">
+					<div class="sh-list fl">
+						<a href="">
+							<img src="images/shouhou01.png" alt="">
+							<div class="sh-tip anim-left">
+								<img src="images/shouhou-tip01.png" alt="">
+							</div>
+						</a>
+					</div>
+					<div class="sh-list fr">
+						<a href="">
+							<img src="images/shouhou02.png" alt="">
+							<div class="sh-tip anim-left">
+								<img src="images/shouhou-tip02.png" alt="">
+							</div>
+						</a>
+					</div>
+				</div>
+				<div id="go_sale" class="clearfix">
+					<img src="images/chaoyouhui.png" alt="">
+					<div class="diy-trial fl">
+						<div class="trial-title">
+							<a href="">
+								<img src="images/sale01.png" alt="">
+							</a>
+						</div>
+						<div class="sale-list">
+							<div class="tempWrap">
+								<ul class="trail-ul">
+									<li>
+										<a href="">
+											<div class="sale-img">
+												<img src="images/sale-img01.jpg" alt="">
+											</div>
+											<div class="diy-tip">
+												<h3>雷柏 M200 多模式纤薄无线鼠标</h3>
+												<p>1300DPI寻迹引擎 磨砂表面 蓝牙、无线双模连接</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="sale-img">
+												<img src="images/sale-img01.jpg" alt="">
+											</div>
+											<div class="diy-tip">
+												<h3>雷柏 M200 多模式纤薄无线鼠标</h3>
+												<p>1300DPI寻迹引擎 磨砂表面 蓝牙、无线双模连接</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="sale-img">
+												<img src="images/sale-img01.jpg" alt="">
+											</div>
+											<div class="diy-tip">
+												<h3>雷柏 M200 多模式纤薄无线鼠标</h3>
+												<p>1300DPI寻迹引擎 磨砂表面 蓝牙、无线双模连接</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="diy-rush fr">
+						<div class="rush-title">
+							<a href="">
+								<img src="images/sale02.png" alt="">
+							</a>
+						</div>
+						<div class="sale-list">
+							<div class="tempWrap">
+								<ul class="rush-ul">
+									<li>
+										<a href="">
+											<div class="sale-img">
+												<img src="images/sale-img01.jpg" alt="">
+											</div>
+											<div class="diy-tip">
+												<h3>雷柏 M200 多模式纤薄无线鼠标</h3>
+												<p>1300DPI寻迹引擎 磨砂表面 蓝牙、无线双模连接</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="sale-img">
+												<img src="images/sale-img01.jpg" alt="">
+											</div>
+											<div class="diy-tip">
+												<h3>雷柏 M200 多模式纤薄无线鼠标</h3>
+												<p>1300DPI寻迹引擎 磨砂表面 蓝牙、无线双模连接</p>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="sale-img">
+												<img src="images/sale-img01.jpg" alt="">
+											</div>
+											<div class="diy-tip">
+												<h3>雷柏 M200 多模式纤薄无线鼠标</h3>
+												<p>1300DPI寻迹引擎 磨砂表面 蓝牙、无线双模连接</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="go_jiyoupai">
+					<img src="images/jiyoupai.png" alt="">
+					<div id="go_floor1" class="diy-floor">
+						<div class="floor-title">
+							<a href="">
+								<img src="images/floor-title01.png" alt="">
+							</a>
+						</div>
+						<div class="floor-main">
+							<div class="leftAD">
+								<a href="" class="topAD">
+									<img src="images/floor1_topAD.png" alt="">
+									<div class="diy-tip">
+										<h3>iPhone X</h3>
+										<p>官网直降千元 超值特惠</p>
+									</div>
+								</a>
+								<div class="bottomAD">
+									<a href="" class="textAD">iPhone X 64G 银色<em>></em></a>
+									<dl>
+										<dt>热销榜</dt>
+										<dd>
+											<span><a href="#">快速充电</a></span>
+											<span><a href="#">自拍神器</a></span>
+											<span><a href="#">全面屏</a></span>
+											<span><a href="#">面部解锁</a></span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="shop-list">
+								<ul>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="rightAD">
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="brank-link">
+							<div class="link-list">
+								<span>品质推荐</span>
+								<a href="#">苹果</a>
+								<a href="#">华为</a>
+								<a href="#">荣耀</a>
+								<a href="#">小米</a>
+								<a href="#">三星</a>
+								<a href="#">OPPO</a>
+								<a href="#">vivo</a>
+								<a href="#">魅族</a>
+								<a href="#">金立</a>
+								<a href="#">美图</a>
+								<a href="#">锤子</a>
+								<a href="#">一加</a>
+							</div>
+							<div class="link-bg"></div>
+						</div>	
+					</div>
+					<div id="go_floor2" class="diy-floor">
+						<div class="floor-title">
+							<a href="">
+								<img src="images/floor-title02.png" alt="">
+							</a>
+						</div>
+						<div class="floor-main">
+							<div class="leftAD">
+								<a href="" class="topAD">
+									<img src="images/floor1_topAD.png" alt="">
+									<div class="diy-tip">
+										<h3>iPhone X</h3>
+										<p>官网直降千元 超值特惠</p>
+									</div>
+								</a>
+								<div class="bottomAD">
+									<a href="" class="textAD">iPhone X 64G 银色<em>></em></a>
+									<dl>
+										<dt>热销榜</dt>
+										<dd>
+											<span><a href="#">快速充电</a></span>
+											<span><a href="#">自拍神器</a></span>
+											<span><a href="#">全面屏</a></span>
+											<span><a href="#">面部解锁</a></span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="shop-list">
+								<ul>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="rightAD">
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="brank-link">
+							<div class="link-list">
+								<span>品质推荐</span>
+								<a href="#">苹果保护壳</a>
+								<a href="#">品牌保护壳</a>
+								<a href="#">平板保护壳</a>
+								<a href="#">苹果保护膜</a>
+								<a href="#">品牌保护膜</a>
+								<a href="#">平板保护膜</a>
+								<a href="#">移动电源</a>
+								<a href="#">数据线</a>
+								<a href="#">充电器</a>
+								<a href="#">手机耳机</a>
+								<a href="#">存储</a>
+							</div>
+							<div class="link-bg"></div>
+						</div>
+					</div>
+					<div id="go_floor3" class="diy-floor">
+						<div class="floor-title">
+							<a href="">
+								<img src="images/floor-title03.png" alt="">
+							</a>
+						</div>
+						<div class="floor-main">
+							<div class="leftAD">
+								<a href="" class="topAD">
+									<img src="images/floor1_topAD.png" alt="">
+									<div class="diy-tip">
+										<h3>iPhone X</h3>
+										<p>官网直降千元 超值特惠</p>
+									</div>
+								</a>
+								<div class="bottomAD">
+									<a href="" class="textAD">iPhone X 64G 银色<em>></em></a>
+									<dl>
+										<dt>热销榜</dt>
+										<dd>
+											<span><a href="#">快速充电</a></span>
+											<span><a href="#">自拍神器</a></span>
+											<span><a href="#">全面屏</a></span>
+											<span><a href="#">面部解锁</a></span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="shop-list">
+								<ul>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="rightAD">
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="brank-link">
+							<div class="link-list">
+								<span>品质推荐</span>
+								<a href="#">iPad</a>
+								<a href="#">平板</a>
+								<a href="#">二合一笔记本</a>
+								<a href="#">游戏本</a>
+								<a href="#">投影仪</a>
+								<a href="#">新款Surface</a>
+								<a href="#">品质鼠标</a>
+								<a href="#">机械键盘</a>
+								<a href="#">高速U盘</a>
+								<a href="#">上门服务</a>
+							</div>
+							<div class="link-bg"></div>
+						</div>
+					</div>
+					<div id="go_floor4" class="diy-floor">
+						<div class="floor-title">
+							<a href="">
+								<img src="images/floor-title04.png" alt="">
+							</a>
+						</div>
+						<div class="floor-main">
+							<div class="leftAD">
+								<a href="" class="topAD">
+									<img src="images/floor1_topAD.png" alt="">
+									<div class="diy-tip">
+										<h3>iPhone X</h3>
+										<p>官网直降千元 超值特惠</p>
+									</div>
+								</a>
+								<div class="bottomAD">
+									<a href="" class="textAD">iPhone X 64G 银色<em>></em></a>
+									<dl>
+										<dt>热销榜</dt>
+										<dd>
+											<span><a href="#">快速充电</a></span>
+											<span><a href="#">自拍神器</a></span>
+											<span><a href="#">全面屏</a></span>
+											<span><a href="#">面部解锁</a></span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="shop-list">
+								<ul>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="rightAD">
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="brank-link">
+							<div class="link-list">
+								<span>品质推荐</span>
+								<a href="#">beats耳机</a>
+								<a href="#">JBL音响</a>
+								<a href="#">森海塞尔</a>
+								<a href="#">大疆无人机</a>
+								<a href="#">益智早教</a>
+							</div>
+							<div class="link-bg"></div>
+						</div>
+					</div>
+					<div id="go_floor5" class="diy-floor">
+						<div class="floor-title">
+							<a href="">
+								<img src="images/floor-title05.png" alt="">
+							</a>
+						</div>
+						<div class="floor-main">
+							<div class="leftAD">
+								<a href="" class="topAD">
+									<img src="images/floor1_topAD.png" alt="">
+									<div class="diy-tip">
+										<h3>iPhone X</h3>
+										<p>官网直降千元 超值特惠</p>
+									</div>
+								</a>
+								<div class="bottomAD">
+									<a href="" class="textAD">iPhone X 64G 银色<em>></em></a>
+									<dl>
+										<dt>热销榜</dt>
+										<dd>
+											<span><a href="#">快速充电</a></span>
+											<span><a href="#">自拍神器</a></span>
+											<span><a href="#">全面屏</a></span>
+											<span><a href="#">面部解锁</a></span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="shop-list">
+								<ul>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="rightAD">
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="brank-link">
+							<div class="link-list">
+								<span>品质推荐</span>
+								<a href="#">公牛插座</a>
+								<a href="#">加湿设备</a>
+								<a href="#">电视盒子</a>
+								<a href="#">按摩设备</a>
+							</div>
+							<div class="link-bg"></div>
+						</div>
+					</div>
+					<div id="go_floor6" class="diy-floor">
+						<div class="floor-title">
+							<a href="">
+								<img src="images/floor-title06.png" alt="">
+							</a>
+						</div>
+						<div class="floor-main">
+							<div class="leftAD">
+								<a href="" class="topAD">
+									<img src="images/floor1_topAD.png" alt="">
+									<div class="diy-tip">
+										<h3>iPhone X</h3>
+										<p>官网直降千元 超值特惠</p>
+									</div>
+								</a>
+								<div class="bottomAD">
+									<a href="" class="textAD">iPhone X 64G 银色<em>></em></a>
+									<dl>
+										<dt>热销榜</dt>
+										<dd>
+											<span><a href="#">快速充电</a></span>
+											<span><a href="#">自拍神器</a></span>
+											<span><a href="#">全面屏</a></span>
+											<span><a href="#">面部解锁</a></span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="shop-list">
+								<ul>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="images/floor1_shoplist01.jpg" alt="">
+											<div class="diy-tip">
+												<h3>iPhone 8 Plus</h3>
+												<p>A11仿生 火热销售</p>
+												<div class="get-price">￥5999.00</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="rightAD">
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+								<a href="#">
+									<img src="images/floor1_rightAD01.jpg" alt="">
+									<div class="diy-tip">
+										<h3>vivo NEX 屏幕指纹版</h3>
+										<p>享300元换新补贴</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="brank-link">
+							<div class="link-list">
+								<span>品质推荐</span>
+								<a href="#">华为手表</a>
+								<a href="#">小米手环</a>
+								<a href="#">米家滑板车</a>
+								<a href="#">公牛车充</a>
+								<a href="#">360儿童手表</a>
+							</div>
+							<div class="link-bg"></div>
+						</div>
+					</div>
+				</div>
+				<div id="go_more">
+					<img src="images/more.png" alt="">
+					<div class="diy-moregoods">
+						<ul class="clearfix">
+							<li class="anim-top" title="飞利浦电动牙刷HX6730">        
+								<a href="">                
+									<span class="goodimg"><img src="images/moregoods01.jpg"></span>           
+									<div class="row2 margin-top font14">飞利浦电动牙刷HX6730</div>
+									<p>￥399</p>
+								</a>
+							</li>
+							<li class="anim-top" title="飞利浦电动牙刷HX6730">        
+								<a href="">                
+									<span class="goodimg"><img src="images/moregoods01.jpg"></span>           
+									<div class="row2 margin-top font14">飞利浦电动牙刷HX6730</div>
+									<p>￥399</p>
+								</a>
+							</li>
+							<li class="anim-top" title="飞利浦电动牙刷HX6730">        
+								<a href="">                
+									<span class="goodimg"><img src="images/moregoods01.jpg"></span>           
+									<div class="row2 margin-top font14">飞利浦电动牙刷HX6730</div>
+									<p>￥399</p>
+								</a>
+							</li>
+							<li class="anim-top" title="飞利浦电动牙刷HX6730">        
+								<a href="">                
+									<span class="goodimg"><img src="images/moregoods01.jpg"></span>           
+									<div class="row2 margin-top font14">飞利浦电动牙刷HX6730</div>
+									<p>￥399</p>
+								</a>
+							</li>
+							<li class="anim-top" title="飞利浦电动牙刷HX6730">        
+								<a href="">                
+									<span class="goodimg"><img src="images/moregoods01.jpg"></span>           
+									<div class="row2 margin-top font14">飞利浦电动牙刷HX6730</div>
+									<p>￥399</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="loadmore">
+						<a href="#" class="button getmore">加载更多好货</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="links">
+			<div class="container">
+				<div class="promise">
+					<a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p0"></dt>
+			                <dd>
+			                    <h4>新九机 心生态</h4>
+			                    <p>全新九机 用心可见</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p1"></dt>
+			                <dd>
+			                    <h4>售假退一罚三</h4>
+			                    <p>我们承诺，只做正品</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="/e" target="_blank">
+			            <dl>
+			                <dt class="icon p2"></dt>
+			                <dd>
+			                    <h4>3小时极速达</h4>
+			                    <p>自建物流，直达客户</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p3"></dt>
+			                <dd>
+			                    <h4>上门快修</h4>
+			                    <p>线上预约维修，在线评估故障</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p4"></dt>
+			                <dd>
+			                    <h4>门店保障</h4>
+			                    <p>实体购物，更加安心</p>
+			                </dd>
+			            </dl>
+			        </a>
+				</div>
+
+				<div class="foot-help">
+		            <dl>
+		                <dt>新手指南</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">购物流程</a>
+		                    
+		                    <a href="">九机评测</a>
+		                    <a href="" rel="nofollow">积分计划</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>付款方式</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">支付方式</a>
+		                    <a href="" rel="nofollow">分期付款</a>
+		                    <a href="" rel="nofollow">网银在线支付</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>配送方式</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">到店自提</a>
+		                    <a href="" rel="nofollow">送货上门</a>
+		                    <a href="" rel="nofollow">快递运输</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>售后服务</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">九机手机保修条例</a>
+		                    <a href="" rel="nofollow">硬件维修及报价</a>
+		                    <a href="" rel="nofollow">延保/意外保服务</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>帮助中心</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">常见问题解答</a>
+		                    <a href="" rel="nofollow">4G热点问题解答</a>
+		                    <a href="" rel="nofollow">交易条款</a>
+		                </dd>
+		            </dl>
+		            <dl class="foot-sns">
+		                <dt class="icon" ></dt>
+		                <dd>
+		                    <h4>九机网官方微信</h4>
+		                    <p>扫描二维码，即刻调戏小九，更多精彩活动等着你哦！</p>
+		                </dd>
+		                <dd class="wblink">
+		                    <a rel="nofollow" href="" target="_blank" class="xinlang"><i class="icon"></i>新浪微博</a>
+		                    <a rel="nofollow" href="" target="_blank" class="tengxun"><i class="icon"></i>九机贴吧</a>
+		                </dd>
+		            </dl>
+		    	</div>
+		    	
+			</div>
+
+			
+		</div>
+		<div id="bottom">
+			<div class="container">
+		        <div class="foot_nav">
+
+		            <a href="" rel="nofollow">常见问题</a><i>|</i><a href="" rel="nofollow">供应商申请</a><i>|</i><a href="" rel="nofollow">配送方式</a><i>|</i><a href="" rel="nofollow">招聘信息</a><i>|</i><a href="" rel="nofollow">关于我们</a><i>|</i><a href="" rel="nofollow">联系我们</a><i>|</i><a href="">投诉建议</a><i>|</i><a href="">地区报价</a><i>|</i><a href="">加盟招商</a><i>|</i><a href="">IT服务</a>
+
+		        </div>
+		        <div class="copy">
+		            
+		            <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+		            
+		            <p>网站ICP备案号：<a rel="nofollow" href="//www.miibeian.gov.cn/" target="_blank">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; <a rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53010202000261" target="_blank" >滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; </p>
+		            
+		            <p>Copyright © 2006 - 2018 九机网 All Rights Reserved</p>
+		            <p>云南九机信息技术有限公司版权所有</p>
+		        </div>
+		        <div class="bot-link">
+		            <a class="wangjian" href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank" style="background:#fff" title="中国互联网违法和不良信息举报中心">
+		            	<img src="images/bot-link01.jpg" />
+		            </a>
+		            <a id="_pingansec_bottomimagelarge_shiming" href="http://si.trustutn.org/info?sn=309160601022242710319&certType=1">
+		            	<img src="images/bot-link02.jpg" />
+		            </a>
+		            
+		            <a class="shiming" style="background:none;" key ="57479c9defbfb00a58d582f4"  logo_size="124x47"  logo_type="realname"  href="//www.anquan.org" >
+		            	<img src="images/bot-link03.jpg" />
+		            </a>
+		            <a class="wangjian" href="https://www.9ji.com/event/2089.html" target="_blank" title="12315维权" alt="12315维权">
+		            	<img src="images/bot-link04.jpg" />
+		            </a>
+		            <a class="wangjing" href="//www.yn.cyberpolice.cn/" target="_blank">
+		            	<img src="images/bot-link05.jpg" />
+		            </a>
+		            <a href="https://www.landui.com/?9ji" target="_blank" title="IDC服务提供商">
+		            	<img src="images/bot-link06.jpg" />
+		            </a>
+		        </div>
+		    </div>
+		</div>
+		<div id="tool-bar"></div>
+	</div>
+</body>
+</html>

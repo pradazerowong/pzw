@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/login.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../js/login.js"></script>
+</head>
+<body>
+	<div id="login">
+		<div id="logotop">
+			<div class="container">
+				<h1>
+					<a href="/">
+						<img src="../images/logo.png" alt="">
+						<span>欢迎登录</span>
+					</a>
+				</h1>
+			</div>
+		</div>
+		<div id="main">
+			<div class="container clearfix">
+				<div class="log_ad">   
+                	<a href=""></a>     
+            	</div>
+            	<div class="login_border">
+                <!--普通登录-->
+	                <div class="login">
+	                    <div class="register">
+	                    	<a href="../html/register.html" target="_blank">账号注册<em>&gt;</em></a>
+	                    </div>
+	                    <ul class="login-tab">                     
+	                        <li class="login-on">普通登录</li>
+	                        <li>手机登录</li>
+	                    </ul>
+	                    <div class="login-body">
+	                         <div class="login-style">
+	                            <dl>
+	                            	<dt><input name="txtUser" type="text" id="txtUser" placeholder="用户名/邮箱/手机号"></dt>
+	                                <dd>yyyy</dd>
+	                            </dl>
+	                            <dl>
+	                            	<dt><input type="password" id="Userpwd" placeholder="请输入您的密码"></dt>
+	                                <dd>tttt</dd>
+	                            </dl>
+	                            <dl id="logincode">
+	                                <dd><input type="text" id="txtCode" name="txtCode" placeholder="验证码"><img id="vCodeImg" src="" width="90" height="34" title="点击换一个"></dd>
+	                            </dl>
+	                            <div class="psword"><a href="" tabindex="-1" class="fr" target="_blank">忘记密码?</a></div>
+	                            
+	                            <div class="remember">
+	                                <input type="checkbox" id="issave" checked=""><label for="issave">下次自动登录</label>
+	                            </div>
+	                            
+	                            
+	                            <div class="tishi"></div>
+	                            <input type="button" id="logbtn" value="登录">
+	                        </div>
+	                        <div class="login-style">
+	                            <dl>
+	                                <dd><input name="phone" type="text" id="phone" placeholder="您的手机号码"></dd>
+	                            </dl>
+	                            <dl id="yz-code">
+	                                <dd>
+	                                	<input type="text" id="txtCode2" name="txtCode2" placeholder="验证码"><img id="Img1" src="" width="90" height="34" title="点击换一个">
+	                                </dd>
+	                            </dl>
+	                            <dl>
+	                                <dd>
+	                                	<input type="text" id="dynamicPWD" placeholder="短信验证码"><input type="button" id="btn" class="btn_mfyzm" value="获取动态密码">
+	                                </dd>
+	                            </dl>
+	                            
+	                            <div class="remember">
+	                                <input type="checkbox" id="issave1" checked="">
+	                                <label for="issave1">下次自动登录</label>
+	                            </div>
+	                            
+	                            <div class="tishi"></div>
+	                            <input type="button" id="dynamicLogon" value="登录">
+	                        </div>
+	                    </div>
+
+	                    <div class="hezuo">
+	                        <h3>使用合作网站的账号登录：</h3>
+	                        <p>
+	                            <a href="javascript:;"><i class="wx"></i>微信</a>
+	                            <a href="javascript:;"><i class="qq"></i>QQ号</a>
+	                        </p>
+	                    </div>
+	                    <div class="qiehuan"></div>
+	                    <div id="zhishi"><img src=""></div>
+	                </div>
+
+	                <!--APP扫码登录-->
+	                <div class="login">
+	                    <i class="qiehuan"></i>
+	                    <div class="app_login">
+	                        <h1><i>-</i>登录失败，请刷新二维码后重试！</h1>
+	                        <h2>使用九机APP&nbsp;&nbsp;扫码安全登录</h2>
+	                    </div>
+	                    <div class="app_code">
+	                        <img id="appLoginCode" src="https://www.9ji.com/acount/login.aspx">
+	                    </div>
+	                    <div class="shuaxin">
+	                        <span>刷新二维码</span>
+	                        <p><a href="http://www.9ji.com/help/9055.html" target="_blank">查看使用帮助</a></p>
+	                    </div>
+	                </div>
+	            </div>
+			</div>
+		</div>
+		<div id="bottom">
+			<div class="container">
+		        <div class="foot_nav">
+
+		            <a href="" rel="nofollow">常见问题</a><i>|</i><a href="" rel="nofollow">供应商申请</a><i>|</i><a href="" rel="nofollow">配送方式</a><i>|</i><a href="" rel="nofollow">招聘信息</a><i>|</i><a href="" rel="nofollow">关于我们</a><i>|</i><a href="" rel="nofollow">联系我们</a><i>|</i><a href="">投诉建议</a><i>|</i><a href="">地区报价</a><i>|</i><a href="">加盟招商</a><i>|</i><a href="">IT服务</a>
+
+		        </div>
+		        <div class="copy">
+		            
+		            <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+		            
+		            <p>网站ICP备案号：<a rel="nofollow" href="//www.miibeian.gov.cn/" target="_blank">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; <a rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53010202000261" target="_blank" >滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; </p>
+		            
+		            <p>Copyright © 2006 - 2018 九机网 All Rights Reserved</p>
+		            <p>云南九机信息技术有限公司版权所有</p>
+		        </div>
+		        <div class="bot-link">
+		            <a class="wangjian" href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank" style="background:#fff" title="中国互联网违法和不良信息举报中心">
+		            	<img src="../images/bot-link01.jpg" />
+		            </a>
+		            <a id="_pingansec_bottomimagelarge_shiming" href="http://si.trustutn.org/info?sn=309160601022242710319&certType=1">
+		            	<img src="../images/bot-link02.jpg" />
+		            </a>
+		            
+		            <a class="shiming" style="background:none;" key ="57479c9defbfb00a58d582f4"  logo_size="124x47"  logo_type="realname"  href="//www.anquan.org" >
+		            	<img src="../images/bot-link03.jpg" />
+		            </a>
+		            <a class="wangjian" href="https://www.9ji.com/event/2089.html" target="_blank" title="12315维权" alt="12315维权">
+		            	<img src="../images/bot-link04.jpg" />
+		            </a>
+		            <a class="wangjing" href="//www.yn.cyberpolice.cn/" target="_blank">
+		            	<img src="../images/bot-link05.jpg" />
+		            </a>
+		            <a href="https://www.landui.com/?9ji" target="_blank" title="IDC服务提供商">
+		            	<img src="../images/bot-link06.jpg" />
+		            </a>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/details.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/details.js"></script>
+</head>
+<body>
+	<div id="details">
+		
+		<div id="top">
+			<div class="container clearfix">
+				<div class="location fl">
+					<i></i>
+				</div>
+				<div class="login fl">
+					<p>Hi，欢迎来九机！<a href="../html/login.html">登录</a><a href="../html/register.html">免费注册</a></p>
+				</div>
+				<ul class="menu fr">
+					<li>
+						<a href="#">个人中心<i></i></a>
+						<ul class="userCenter">
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的积分</a></li>
+							<li><a href="#">我的试用</a></li>
+							<li><a href="#">我的收藏</a></li>
+							<li><a href="#">我的咨询</a></li>
+							<li><a href="#">我的优惠券</a></li>
+							<li><a href="#">报修/退换货</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i></i>会员俱乐部</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li>
+						<a href="#"><i></i>客户端</a>
+						<dl class="appDown">
+				            <dt>
+				            	<a href="#">
+				            		<img src="../images/appdown.png" width="100" height="100" />
+				            	</a>
+				            	<span>扫描二维码下载</span>
+				            </dt>
+				            <dd>
+				                <a href="" target="_blank" title="下载安卓客户端">Android</a>
+				                <a href="" target="_blank" title="下载iPhone客户端">iPhone</a>
+				                <a href="" target="_blank" title="访问触屏版">触屏版</a>
+				            </dd>
+				        </dl>
+					</li>
+					<li><a href="#">在线客服</a></li>
+					<li>
+						<a href="#">网站导航<i></i></a>
+						<ul class="siteMap">
+			                <li class="character">
+			                    <h3>九机特色</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="">附近门店</a></li>
+			                        <li><a href="">一手优品</a></li>
+			                        <li><a href="">免费贴膜<i class="hot-icon"></i></a></li>
+			                        <li><a href="">旧机回收</a></li>
+			                        <li><a href="">预约维修</a></li>
+			                        <li><a href="">预约快修</a></li>
+			                        <li><a href="">九机小店</a></li>
+			                    </ul>
+			                </li>
+			                <li class="service">
+			                    <h3>服务集市</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">在线支付</a></li>
+			                        <li><a href="#">话费充值</a></li>
+			                        <li><a href="#">品牌专区</a></li>
+			                        <li><a href="#">试用中心</a></li>
+			                        <li><a href="#">帮助中心</a></li>
+			                        <li><a href="#">九机服务</a></li>
+			                        <li><a href="#">会员俱乐部<i class="hot-icon"></i></a></li>
+			                    </ul>
+			                </li>
+			                <li class="join">
+			                    <h3>招商合作</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">供应商申请</a></li>
+			                        <li><a href="#">IT服务</a></li>
+			                        <li><a href="#">九机百科</a></li>
+			                    </ul>
+			                </li>
+			                <li class="more">
+			                    <h3>更多精选</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">九机头条</a>
+			                        <li><a href="#">人才招聘</a>
+			                    </ul>
+			                </li>
+			                <li class="product">
+			                    <h3>产品选择</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">手机</a></li>
+			                        <li><a href="#">手机配件<i class="hot-icon"></i></a></li>
+			                        <li><a href="#">电脑周边</a></li>
+			                        <li><a href="#">耳机音响</a></li>
+			                        <li><a href="#">智能产品<i class="new-icon"></i></a></li>
+			                        <li><a href="#">笔记本/电脑</a></li>
+			                    </ul>
+			                </li>
+				        </ul>
+					</li>
+					<li><a href="#"><i></i>不良信息举报</a></li>
+					<li>
+						<a href="#"><i></i>400-008-3939</a>
+						<div class="freePhone">
+			            	<p>输入手机号码并<span>免费</span>拨打：</p><input type="text" id="freePhoneNum"/><input type="button" id="freePhoneBtn" value="拨打">
+			        	</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="header">
+			<div class="container clearfix">
+				<div class="logoBox fl">
+					<h1><a href="../index.html" title="九机网">
+	                <img src="../images/logo.png" alt="九机网"/></a></h1>
+				</div>
+				<div class="search fl">
+					<form action="/search" method="get" class="searchForm">
+		                <input class="searchBox" name="w" type="text" id="searchbox" placeholder="iPhone XS" value="" autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" maxlength="50" />
+		                <!-- <input type="hidden" value="" name="pId" />
+		                <input type="hidden" value="ASP.index_aspx" />
+		                <input type="hidden" value="False" /> -->
+		                <input name="" type="submit" class="searchBtn" value="搜索" />
+	            	</form>
+	            	<dl class="searchHistory">
+		                <dt>搜索历史：</dt>
+		                <dd class="searchHistoryList"><a href="">iphone</a><a href="">6s</a></dd>
+		                <dd><a href="javascript:;" style="color:#3caaff;border-bottom:0;">清空历史记录</a></dd>
+		            </dl>
+		            <div class="searchGuess"></div>
+		            <p> 热门搜索：
+						<a href="/search?w=iPhone XS">iPhone XS</a>
+						<a href="/search?w=荣耀8X">荣耀8X</a>
+						<a href="/search?w=vivo X23">vivo X23</a>
+						<a href="/search?w=OPPO R17">OPPO R17</a>
+						<a href="/search?w=nova 3">nova 3</a>
+						<a href="/search?w=华为 P20">华为 P20</a>
+						<a href="/search?w=小米8">小米8</a>
+						<a href="/search?w=数据线">数据线</a>
+						<a href="/search?w=MAC">MAC</a>
+						<a href="/search?w=九机定制膜">九机定制膜</a>
+						<a href="/search?w=小米ai音响">小米ai音响</a>
+					</p>
+		        </div>
+
+		            <div class="cart fr">
+		                <a href="#">
+		                    购物车
+		                    <span></span>
+		                </a>
+		                <div class="cartList">
+		                    <div class="cart-box">
+		                    	<div class="cart-item-parent">
+		             				
+		                    	</div>
+		                    	<div class="cart-mini-total">
+        							<p>共<span></span>件商品，总计：<b>zongjia</b></p>
+        							<a href="">去结算</a>
+        						</div>
+		                    </div>
+		                </div>
+		            </div>  
+	  
+		        <div class="nav">
+		        	<div class="container">
+		        		<h3 class="navMenuCursor">全部商品分类</h3>
+				        <ul class="navMenu">
+				        	<li>
+				        		<b><i></i><a href="#">手机通讯</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="iPhone XS" href="#">iPhone XS</a>
+				        			<a title="小米8屏幕指纹版" href="#">小米8屏幕指纹版</a> 
+				        			<a title="OPPO R17" href="#">OPPO R17</a> 
+				        			<a title="vivo X23" href="#">vivo X23</a> 
+				        			<a title="华为nova 3" href="#">华为nova 3</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="苹果" href="#">苹果</a>
+				                                <a title="华为" href="#">华为</a>
+				                                <a title="荣耀" href="#">荣耀</a>
+				                                <a title="小米" href="#">小米</a>
+				                                <a title="三星" href="#">三星</a>
+				                                <a title="OPPO" href="#">OPPO</a>
+				                                <a title="vivo" href="#">vivo</a>
+				                                <a title="美图" href="#">美图</a>
+				                                <a title="魅族" href="#">魅族</a>
+				                                <a title="一加" href="#">一加</a>
+				                                <a title="锤子" href="#">锤子</a>
+				                                <a title="360" href="#">360</a>
+				                                <a title="努比亚" href="#">努比亚</a>
+				                                <a title="全部手机" href="#">全部手机</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>价位</h4>
+				                            <p>
+				                            	<a title="0-599" href="#">0-599</a>
+				                                <a title="600-999" href="#">600-999</a>
+				                                <a title="1000-1999" href="#">1000-1999</a>
+				                                <a title="2000-2999" href="#">2000-2999</a>
+				                                <a title="3000-3999" href="#">3000-3999</a>
+				                                <a title="4000-4999" href="#">4000-4999</a>
+				                                <a title="5000以上" href="#">5000以上</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>网络制式</h4>
+				                            <p>
+				                                <a title="全网通" href="#">全网通</a>
+				                                <a title="4G+全网通" href="#">4G+全网通</a>
+				                                <a title="移动/联通双4G" href="#">移动/联通双4G</a>
+				                                <a title="联通4G" href="#">联通4G</a>
+				                                <a title="电信4G" href="#">电信4G</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>产品特点</h4>
+					                            <p>
+					                                <a title="快速充电" href="#">快速充电</a>
+					                                <a title="指纹识别" href="#">指纹识别</a>
+					                                <a title="拍照神器" href="#">拍照神器</a>
+					                                <a title="双卡双待" href="#">双卡双待</a>
+					                                <a title="女性手机" href="#">女性手机</a>
+					                                <a title="老人手机" href="#">老人手机</a>
+					                                <a title="全面屏" href="#">全面屏</a>
+					                                <a title="面部识别解锁" href="#">面部识别解锁</a>
+					                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>热销机型</h4>
+				                            <p>
+				                                <a title="iPhone X" href="#">iPhone X</a>
+				                                <a title="iPhone 8 Plus" href="#">iPhone 8 Plus</a>
+				                                <a title="华为 nova 3" href="#">华为 nova 3</a>
+				                                <a title="荣耀10" href="#">荣耀10</a>
+				                                <a title="iPhone 6s Plus" href="#">iPhone 6s Plus</a>
+				                                <a title="iPhone6" href="#">iPhone6</a>
+				                                <a title="OPPO R17" href="#">OPPO R17</a>
+				                                <a title="华为 P20" href="#">华为 P20</a>
+				                                <a title="三星 Note9" href="#">三星 Note9</a>
+				                                <a title="vivo x21" href="#">vivo x21</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>售后维修</h4>
+				                            <p>
+				                                <a title="手机维修" href="#">手机维修</a>
+				                                <a title="维修配件价格" href="#">维修配件价格</a>
+				                                <a title="九机服务" href="#">九机服务</a>
+				                                <a title="苹果电池快修" href="#">苹果电池快修</a>
+				                                <a title="苹果显示屏快修" href="#">苹果显示屏快修</a>
+				                            </p>
+					        			</li>
+				        			</ul>
+			                        <div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="../images/nav01.jpg"/></a>
+		                                <a href="#" title=""><img src="../images/nav02.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">智能家居</a>/<a href="#">智能健康</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="智能电视" href="#">智能电视</a> 
+				        			<a title="电视盒子" href="#">电视盒子</a> 
+				        			<a title="智能门锁" href="#">智能门锁</a> 
+				        			<a title="监控摄像头" href="#">监控摄像头</a> 
+				        			<a title="公牛插座" href="#">公牛插座</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="荣耀" href="">荣耀</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="乐心" href="">乐心</a>
+				                                <a title="公牛" href="">公牛</a>
+				                                <a title="Lifesmart" href="">Lifesmart</a>
+				                                <a title="南极人" href="">南极人</a>
+				                                <a title="飞利浦" href="">飞利浦</a>
+				                                <a title="萤石" href="">萤石</a>
+				                                <a title="睿量" href="">睿量</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="生活周边" href="#">生活周边</a></h4>
+				                            <p>
+				                                <a title="路由器" href="">路由器</a>
+				                                <a title="智能插座" href="">智能插座</a>
+				                                <a title="打火机" href="">打火机</a>
+				                                <a title="手机支架" href="">手机支架</a>
+				                                <a title="电池" href="">电池</a>
+				                                <a title="闹钟" href="">闹钟</a>
+				                                <a title="其他" href="">其他</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能小电" href="">智能小电</a></h4>
+				                            <p>
+				                                <a title="灯光照明" href="">灯光照明</a>
+				                                <a title="加湿器" href="">加湿器</a>
+				                                <a title="厨房小电" href="">厨房小电</a>
+				                                <a title="扫地机" href="">扫地机</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="电视盒子" href="">电视盒子</a></h4>
+				                            <p>
+				                                <a title="小米盒子" href="">小米盒子</a>
+				                                <a title="荣耀盒子" href="">荣耀盒子</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能电视" href="">智能电视</a></h4>
+				                            <p>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="索尼" href="">索尼</a> 
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="健康护理" href="">健康护理</a></h4>
+				                            <p>
+				                                <a title="电动牙刷" href="">电动牙刷</a>
+				                                <a title="美妆个护" href="">美妆个护</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="按摩设备" href="">按摩设备</a></h4>
+				                            <p>
+				                                <a title="肩部按摩" href="">肩部按摩</a>
+				                                <a title="按摩枪" href="">按摩枪</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能安防" href="">智能安防</a></h4>
+					                            <p>
+					                                <a title="智能门锁" href="">智能门锁</a>
+					                                <a title="监控摄像头" href="">监控摄像头</a>
+					                                <a title="电子猫眼/门铃" href="">电子猫眼/门铃</a>
+					                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能门锁" href="">智能门锁</a></h4>
+				                            <p>
+				                                <a title="凯迪仕" href="">凯迪仕</a>
+				                                <a title="LifeSmart" href="">LifeSmart</a>
+				                                <a title="九万里" href="">九万里</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="../images/nav03.jpg"/></a>
+		                                <a href="#" title=""><img src="../images/nav04.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">智能穿戴</a>/<a href="#">智能出行</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="智能手环" href="">智能手环</a> 
+				        			<a title="儿童手表" href="">儿童手表</a> 
+				        			<a title="智能手表" href="">智能手表</a> 
+				        			<a title="电动车" href="">电动车</a> 
+				        			<a title="行车记录仪" href="">行车记录仪</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="小天才" href="">小天才</a>
+				                                <a title="AMAZFIT" href="">AMAZFIT</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="公牛" href="">公牛</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能手表" href="">智能手表</a></h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="AMAZFIT" href="">AMAZFIT</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="Ticwatch" href="">Ticwatch</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能手环" href="">智能手环</a></h4>
+				                            <p>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="荣耀" href="">荣耀</a>
+				                                <a title="AMAZFIT" href="">AMAZFIT</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="儿童手表" href="">儿童手表</a></h4>
+				                            <p>
+				                                <a title="小天才" href="">小天才</a>
+				                                <a title="糖猫" href="">糖猫</a>
+				                                <a title="小米" href="">小米</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="相机" href="">相机</a></h4>
+				                            <p>
+				                                <a title="Gopro" href="">Gopro</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="智能车载" href="">智能车载</a></h4>
+				                            <p>
+				                                <a title="车载蓝牙" href="">车载蓝牙</a>
+				                                <a title="车载充电器" href="">车载充电器</a>
+				                                <a title="车载支架" href="">车载支架</a>
+				                                <a title="行车记录仪" href="">行车记录仪</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="平衡车" href="">平衡车</a></h4>
+				                            <p>
+				                                <a title="小米平衡车" href="">小米平衡车</a>
+				                                <a title="小米九号Plus" href="">小米九号Plus</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="电动车" href="">电动车</a></h4>
+				                            <p>
+				                                <a title="电动车" href="">电动车</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="../images/nav05.jpg"/></a>
+		                                <a href="#" title=""><img src="../images/nav06.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">手机配件</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="保护壳" href="">保护壳</a> 
+				        			<a title="移动电源" href="">移动电源</a> 
+				        			<a title="手机耳机" href="">手机耳机</a> 
+				        			<a title="钢化膜" href="">钢化膜</a> 
+				        			<a title="数据线" href="">数据线</a> 
+				        			<a title="充电器" href="">充电器</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4><a title="保护壳" href="">保护壳</a></h4>
+				                            <p>
+				                                <a title="苹果保护壳" href="">苹果保护壳</a>
+				                                <a title="华为保护壳" href="">华为保护壳</a>
+				                                <a title="荣耀保护壳" href="">荣耀保护壳</a>
+				                                <a title="三星保护壳" href="">三星保护壳</a>
+				                                <a title="OPPO保护壳" href="">OPPO保护壳</a>
+				                                <a title="vivo保护壳" href="">vivo保护壳</a>
+				                                <a title="小米保护壳" href="">小米保护壳</a>
+				                                <a title="魅族保护壳" href="">魅族保护壳</a>
+				                                <a title="平板保护壳" href="">平板保护壳</a>
+				                                <a title="其他" href="">其他</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="保护膜" href="">保护膜</a></h4>
+				                            <p>
+				                                <a title="苹果保护膜" href="">苹果保护膜</a>
+				                                <a title="华为保护膜" href="">华为保护膜</a>
+				                                <a title="荣耀保护膜" href="">荣耀保护膜</a>
+				                                <a title="三星保护膜" href="">三星保护膜</a>
+				                                <a title="OPPO保护膜" href="">OPPO保护膜</a>
+				                                <a title="vivo保护膜" href="">vivo保护膜</a>
+				                                <a title="小米保护膜" href="">小米保护膜</a>
+				                                <a title="魅族保护膜" href="">魅族保护膜</a>
+				                                <a title="平板保护膜" href="">平板保护膜</a>
+				                                <a title="其他" href="">其他</a>  
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="数据线" href="">数据线</a></h4>
+				                            <p>
+				                                <a title="苹果数据线" href="">苹果数据线</a>
+				                                <a title="MFI认证线" href="">MFI认证线</a>
+				                                <a title="安卓Type-C数据线" href="">安卓Type-C数据线</a>
+				                                <a title="安卓Micro数据线" href="">安卓Micro数据线</a>
+				                                <a title="多合一数据线" href="">多合一数据线</a>
+				                                <a title="转接头" href="">转接头</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="移动电源" href="">移动电源</a></h4>
+				                            <p>
+				                                <a title="超轻薄" href="">超轻薄</a>
+				                                <a title="自带线" href="">自带线</a>
+				                                <a title="无线输出" href="">无线输出</a>
+				                                <a title="苹果输入" href="">苹果输入</a>
+				                                <a title="Type-C输入" href="">Type-C输入</a>
+				                                <a title="安卓Micro输入" href="">安卓Micro输入</a>
+				                                <a title="双向快充" href="">双向快充</a>
+				                                <a title="单口输出" href="">单口输出</a>
+				                                <a title="多口输出" href="">多口输出</a>
+				                                <a title="自带插头" href="">自带插头</a>
+				                                <a title="电量数字显示" href="">电量数字显示</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="充电器" href="">充电器</a></h4>
+				                            <p>
+				                                <a title="无线充电器" href="">无线充电器</a>
+				                                <a title="快充充电器" href="">快充充电器</a>
+				                                <a title="多口充电器" href="">多口充电器</a>
+				                                <a title="单口充电器" href="">单口充电器</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="手机耳机" href="">手机耳机</a></h4>
+				                            <p>
+				                                <a title="苹果耳机" href="">苹果耳机</a>
+				                                <a title="华为耳机" href="">华为耳机</a>
+				                                <a title="荣耀耳机" href="">荣耀耳机</a>
+				                                <a title="小米耳机" href="">小米耳机</a>
+				                                <a title="三星耳机" href="">三星耳机</a>
+				                                <a title="魅族耳机" href="">魅族耳机</a>
+				                                <a title="OPPO耳机" href="">OPPO耳机</a>
+				                            </p>
+				        				</li>
+					        			<li>
+					        				<h4><a title="存储" href="">存储</a></h4>
+				                            <p>
+				                                <a title="三星存储卡" href="">三星存储卡</a>
+				                                <a title="金士顿存储卡" href="">金士顿存储卡</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="../images/nav07.jpg"/></a>
+		                                <a href="#" title=""><img src="../images/nav08.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">电脑办公</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="iPad" href="">iPad</a> 
+				        			<a title="游戏本" href="">游戏本</a> 
+				        			<a title="游戏外设" href="">游戏外设</a> 
+				        			<a title="小米电脑" href="">小米电脑</a> 
+				        			<a title="苹果电脑" href="">苹果电脑</a> 
+				        			<a title="200M路由" href="">200M路由</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>电脑</h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华硕" href="">华硕</a>
+				                                <a title="联想" href="">联想</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="戴尔" href="">戴尔</a>
+				                                <a title="微软" href="">微软</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="神舟" href="">神舟</a>
+				                                <a title="惠普" href="">惠普</a>
+				                                <a title="一体机" href="">一体机</a>
+				                                <a title="品牌台式机" href="">品牌台式机</a>
+				                                <a title="显示器" href="">显示器</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4>平板</h4>
+				                            <p> 
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="华为" href="">华为</a>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="微软" href="">微软</a>
+				                                <a title="三星" href="">三星</a>
+				                                <a title="亚马逊" href="">亚马逊</a>
+				                                <a title="联想" href="">联想</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="外设产品" href="">外设产品</a></h4>
+				                            <p>
+				                                <a title="鼠标" href="">鼠标</a>
+				                                <a title="键盘" href="">键盘</a>
+				                                <a title="键鼠套" href="">键鼠套</a>
+				                                <a title="U盘" href="">U盘</a>
+				                                <a title="移动硬盘" href="">移动硬盘</a>
+				                                <a title="鼠标垫" href="">鼠标垫</a>
+				                                <a title="转接线" href="">转接线</a>
+				                                <a title="适配器" href="">适配器</a>
+				                                <a title="保护膜" href="">保护膜</a>
+				                                <a title="散热器" href="">散热器</a>
+				                                <a title="防辐射眼镜" href="">防辐射眼镜</a>
+				                                <a title="电脑包" href="">电脑包</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="网络产品" href="">网络产品</a></h4>
+				                            <p> 
+				                                <a title="路由器" href="">路由器</a>
+				                                <a title="无线接收装置" href="">无线接收装置</a>
+				                                <a title="网线" href="">网线</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4 class="orange"><a title="办公设备" href="">办公设备</a></h4>
+				                            <p>
+				                                <a title="投影仪" href="">投影仪</a>
+				                                <a title="投影仪配件" href="">投影仪配件</a>
+				                                <a title="打印机" href="">打印机</a>
+				                                <a title="办公耗材" href="">办公耗材</a>
+				                                <a title="更多" href="">更多</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="服务产品" href="">服务产品</a></h4>
+				                            <p>
+				                                <a title="九机上门" href="">九机上门</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="../images/nav09.jpg"/></a>
+		                                <a href="#" title=""><img src="../images/nav10.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        	<li>
+				        		<b><i></i><a href="#">时尚影音</a>/<a href="#">娱乐竞技</a><s>&gt;</s></b>
+				        		<span>
+				        			<a title="Beats" href="">Beats</a> 
+				        			<a title="益智玩具" href="">益智玩具</a> 
+				        			<a title="JBL" href="">JBL</a> 
+				        			<a title="运动相机" href="">运动相机</a> 
+				        			<a title="拍立得" href="">拍立得</a> 
+				        			<a title="无人机" href="">无人机</a>
+				        		</span>
+				        		<div>
+				        			<ul class="fl">
+					        			<li>
+					        				<h4>热门品牌</h4>
+				                            <p>
+				                                <a title="Beats" href="">Beats</a>
+				                                <a title="JBL" href="">JBL</a>
+				                                <a title="哈曼卡顿" href="">哈曼卡顿</a>
+				                                <a title="B&O" href="">B&amp;O</a>
+				                                <a title="Bose" href="">Bose</a>
+				                                <a title="漫步者" href="">漫步者</a>
+				                                <a title="索尼" href="">索尼</a>
+				                                <a title="捷波朗" href="">捷波朗</a>
+				                                <a title="大疆" href="">大疆</a>
+				                                <a title="盈佳" href="">盈佳</a>
+				                                <a title="新游" href="">新游</a>
+				                                <a title="富士" href="">富士</a>
+				                                <a title="GoPro" href="">GoPro</a> 
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4 class="orange"><a title="耳机耳麦" href="">耳机耳麦</a></h4>
+				                            <p>
+				                                <a title="Beats" href="">Beats</a>
+				                                <a title="SONY" href="">SONY</a>
+				                                <a title="JBL" href="">JBL</a>
+				                                <a title="魔声" href="">魔声</a>
+				                                <a title="B&O" href="">B&amp;O</a>
+				                                <a title="华为" href="">华为</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="音箱/音响" href="">音箱/音响</a></h4>
+				                            <p>
+				                                <a title="JBL" href="">JBL</a>
+				                                <a title="哈曼卡顿" href="">哈曼卡顿</a>
+				                                <a title="漫步者" href="">漫步者</a>
+				                                <a title="Bose" href="">Bose</a>
+				                                <a title="SONY" href="">SONY</a>
+				                                <a title="B&O" href="">B&amp;O</a>
+				                                <a title="猫王" href="">猫王</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="蓝牙耳机" href="">蓝牙耳机</a></h4>
+				                            <p>
+				                                <a title="苹果" href="">苹果</a>
+				                                <a title="捷波朗" href="">捷波朗</a>
+				                                <a title="小米" href="">小米</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="数码音频" href="">数码音频</a></h4>
+				                            <p>
+				                                <a title="运动相机" href="">运动相机</a>
+				                                <a title="拍立得" href="">拍立得</a>
+				                                <a title="音频播放器" href="">音频播放器</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="无人机" href="">无人机</a></h4>
+				                            <p>
+				                                <a title="精灵4系列" href="">精灵4系列</a>
+				                                <a title="大疆御" href="">大疆御</a>
+				                                <a title="大疆悟" href="">大疆悟</a>
+				                                <a title="大疆云台" href="">大疆云台</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="益智娱乐" href="">益智娱乐</a></h4>
+				                            <p>
+				                                <a title="儿童玩具" href="">儿童玩具</a>
+				                                <a title="游戏手柄" href="">游戏手柄</a>
+				                                <a title="减压娱乐" href="">减压娱乐</a>
+				                            </p>
+					        			</li>
+					        			<li>
+					        				<h4><a title="全景相机" href="">全景相机</a></h4>
+				                            <p>
+				                                <a title="小米" href="">小米</a>
+				                                <a title="荣耀" href="">荣耀</a>
+				                                <a title="三星" href="">三星</a>
+				                            </p>
+					        			</li>
+					        		</ul>
+					        		<div class="menu_ad fr">
+		                                <a href="#" title="标题"><img src="../images/nav11.jpg"/></a>
+		                                <a href="#" title=""><img src="../images/nav12.jpg"/></a>
+			                        </div>
+				        		</div>
+				        	</li>
+				        </ul>
+				        <ul class="navBar">
+				            <li><a href="#">首页</a></li>
+				            <li><a href="#" target="_blank" rel="nofollow">旧机回收</a></li>
+				            <li><a href="#" target="_blank" rel="nofollow">一手优品</a></li>
+				            <li><a href="#" target="_blank">二手良品</a></li>
+				            <li class="subnav">
+				                <a href="#" target="_blank" class="navsh" rel="nofollow">售后维修</a>
+				                <ul>
+				                	<li><a target="_blank" href="#">售后公告</a></li>
+				                    <li><a target="_blank" href="#">常见问题</a></li>
+				                </ul>
+				            </li>
+
+				            <li class="subnav">
+				                <a href="/news/" target="_blank" class="navzx">九机头条</a>
+				                <ul>
+				                    <li><a target="_blank" href="#">行业资讯</a></li>
+				                    <li><a target="_blank" href="#">数码评测</a></li>
+				                    <li><a target="_blank" href="#">手机导购</a></li>
+				                </ul>
+				            </li>
+				           	<li class="subnav"><a title="九机小店" href="#" target="_blank">九机小店</a></li>
+				            <li><a href="#">人气排行</a></li>
+				        </ul>
+		        	</div>
+		        </div>
+			</div>
+		</div>
+
+		<div id="main">
+			<div class="container clearfix">
+				<div class="iweizhi">
+        			<div class="fl">
+			            <a href="../index.html">首页</a>
+			             &gt; <a href="../html/list.html">手机通讯</a> &gt; <a href="../html/list.html">手机</a> &gt; <a href="">苹果（Apple）</a>&gt;<a href="" id="iweizhi"> iPhone XS Max(A2104) 国行版</a>
+			        </div>
+			    </div>
+			    <div class="clearfix">
+			    	<div class="shopinfo-img fl" style="position:relative; width:440px;">
+            			
+			            <div id="bigPicBefore" style="display: block;">
+			                <div class="skin-jb" style="right:15px; top:0;"></div>
+			                <div class="bigpic">
+			                	<!-- 传参图片 -->
+			                    <a href="javascript:;"><img src="" width="440" height="440" class="jqzoom" alt="" style="cursor: crosshair;"></a>
+			                </div>
+			                <div class="shopimg-list overflow-hide">
+			                    <div id="leftpicbtn" class="leftpicbtn prevStop">
+			                    	<span></span>
+			                    </div>
+			                    <div class="smallbox">
+			                        <div class="tempWrap" style="overflow:hidden; position:relative; width:400px">
+			                        	<ul id="smallpic" class="smallpic" style="width: 400px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+			                        		<li class="" style="float: left; width: 70px;">
+			                        			<a><img src="" width="70" height="70" " index="1"></a>
+			                        		</li>
+			                        		<li style="float: left; width: 70px;" class="smpichover">
+			                        			<a>
+			                        				<img src="" width="70" height="70"  index="2">
+			                        			</a>
+			                        		</li>
+			                        		<li style="float: left; width: 70px;" class="">
+			                        			<a>
+			                        				<img src="" width="70" height="70" index="3">
+			                        			</a>
+			                        		</li>
+			                        		<li style="float: left; width: 70px;" class="">
+			                        			<a>
+			                        				<img src="" width="70" height="70" index="4">
+				                        		</a>
+				                        	</li>
+				                        	<li style="float: left; width: 70px;" class="">
+				                        		<a>
+				                        			<img src="" width="70" height="70" index="5">
+				                        		</a>
+				                        	</li>
+			                        	</ul>
+			                    	</div>
+			                    </div>
+			                    <div id="rightpicbtn" class="rightpicbtn fr nextStop"><span></span></div>
+			                </div>
+			            </div>     
+			            <div class="shop-id" title="累计：0,本周：25392">
+			                <span>商品编号：68430</span>
+			                
+			                <a href="javascript:void(0);" class="fav-btn fr nprice7 side-db-btn" title="商品对比" ppid="68430" cid="2" price="￥10499.00" imgsrc="20180913061146641.jpg"><i style="background-position:-83px 0;"></i>对比</a>        
+			                <a href="javascript:void(0);" onclick=" myfav(68430, this) " class="fav-btn fr" title="收藏此商品"><i style="background-position:-19px 0;"></i>收藏</a>
+			                
+			                <a href="javascript:void(0);" onclick=" showSendDetail()" class="fav-btn fr" title="免费发送商品介绍到手机"><i style="background-position:1px 0;"></i>发送到手机</a> 
+			            </div>
+			            <div class="fenxiang_box">
+			               <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1539083570326">
+			                    <span style="float: left; height: 28px; line-height: 28px;">分享：</span>
+			                    <a href="https://www.9ji.com/product/68430.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+			                    <a href="https://www.9ji.com/product/68430.html#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+			                    <a href="https://www.9ji.com/product/68430.html#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+			                    <a href="https://www.9ji.com/product/68430.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>                    
+			                </div>
+			            </div>
+			        </div>
+			        <div class="shopinfo clearfix">
+			            <div class="shop-title">
+			                <div class="new-kf fr">
+			                    <a href="javascript:void(0);" onclick="Jiuji.chat(&#39;show&#39;)" class="fav-btn"><i style="background-position:-105px 1px;"></i>咨询客服</a>
+			                    <div class="shareEwm">
+			                        <a class="fav-btn"><i style="background-position:-98px -21px;margin-right:3px;"></i> 手机浏览 <i style="background-position:-125px -27px;width:11px;height:9px;float:right;margin-top:6px;margin-left:3px;"></i></a>
+			                        <div class="big-ewm">
+			                            <div>
+			                                <h4>扫描到手机&nbsp;&nbsp;精彩随时看</h4>
+			                                <div class="big-ewm-con" style="">
+			                                    将喜欢捧在手心<br>
+			                                    与喜欢的人共同分享
+			                                </div>
+			                            </div>
+			                            <img src="../images/CodeImg.gif">
+			                            <div class="clear"></div>
+			                        </div>
+			                    </div>
+			                   	<a href="javascript:;" class="jiexin-qrcode fav-btn hide"><i class="qr-icon"></i>分期快速办理</a>
+			                </div>
+			                <h2 class="d_h2" style="overflow: hidden; width: 480px;"><strong>iPhone XS Max(A2104) 国行版金色 256GB </strong></h2>
+			            </div>
+			            <div class="miaoshu">【火热销售】官网最高直降400元！旧苹果换新苹果最高补贴500元！</div>
+			           
+			            <div class="shop-price-bg" style="overflow: inherit;">                
+			                <div class="shop-price" style="height:34px;">
+			                    <span style="width:70px;font-family:SimSun; height:32px; line-height:37px; float:left;">九 机 价：</span>
+			                    <strong title="0" class="pro-price jiujiPrice fl">
+			                    	<b style="display:inline">￥</b>
+			                    	<big id="spprice" class="showallprice" data-ppid="68430" proid="35744" data-price="10499">10499.00</big>
+			                    </strong>
+			                    <div class="fl" style="margin-top:6px;">
+			                        <a href="javascript:;" onclick="priceTrend()" style="color: #888; margin-left: 5px;">[价格走势]</a>
+			                        <a href="javascript:;" id="price-des" onclick="jiangjia(this,68430) " style="color: #888; margin-left: 5px;">[降价通知]</a>
+			                    </div>
+			                    <div class="goodsEvaluation">
+			                        <dl>
+			                            <dt><a href="javascript:;" style="color: #9c9c9c">使用心得</a></dt>
+			                            <dd>1320</dd>
+			                        </dl>
+			                        <dl>
+			                            <dt><a href="javascript:;" style="color: #9c9c9c">商品咨询</a></dt>
+			                            <dd>65</dd>
+			                        </dl>
+			                        <dl>
+			                            <dt style="color: #9c9c9c">好评率</dt>
+			                            <dd>98%</dd>
+			                        </dl>
+			                    </div>
+			                </div>
+
+			                <dl class="pro-info" id="lowPrice" style="display: block">
+			                    <dt>低价选择：</dt>
+			                    <dd class="low-price">
+			                        
+			                       <a href="" style="margin-right:25px;" target="_blank">一手优品：￥8799.00</a>
+			                        
+			                    </dd>
+			                </dl>
+
+			                
+			                <dl class="pro-info">
+			                    <dt>销量排行：</dt>
+			                    <dd>
+			                        <span style="color:#333">手机单品当日销量排行 第1名</span><a href="https://www.9ji.com/goods/rank.aspx" style="color: #7597dc;margin-left: 10px;">详情点击</a>
+			                    </dd>
+			                </dl>
+
+			            </div>
+			           
+			            
+			             
+			            <div class="pro-info" style="padding:5px 10px 0;">
+			                <dl>
+			                    <dt>配置信息：</dt>
+			                    <dd style="color:#c80f1e">充电器x1，数据线x1，耳机x1（内置电池，3174mAh）</dd>
+			                </dl>
+			            </div>
+			              
+			            
+			            <div class="xuan_box">
+			                
+
+				            <div class="yanse flex">
+				                <span class="pz_tit">颜　　色：</span>
+				                <ul class="ys_xuan flex flex-wrap">
+					            	<li>
+					            		<a data-id="68430" href="" title="36.36%的人购买了此颜色" class="yansecur huanxin">
+					            			<img src="" width="34"><span>金色</span>
+						            	</a>
+						            </li>
+					            	<li>
+					            		<a data-id="68431" href="" title="18.18%的人购买了此颜色" class=" huanxin">
+					            			<img src="" width="34"><span>银色</span>
+					            		</a>
+					            	</li>
+					            	<li>
+					            		<a data-id="68432" href="" title="36.36%的人购买了此颜色" class=" huanxin">
+					            			<img src="" width="34"><span>深空灰色</span>
+					            		</a>
+					            	</li>
+					            </ul>
+				            </div>
+
+				            <div class="yanse flex">
+				                <span class="pz_tit">容　　量：</span><ul class="ys_xuan flex flex-wrap">
+				            	<li><a data-id="68397" href="https://www.9ji.com/product/68397.html" class=" huanxin"><span>64GB</span></a></li>
+				            	<li><a data-id="68430" href="https://www.9ji.com/product/68430.html" class="yansecur huanxin"><span>256GB</span></a></li>
+				            	<li><a data-id="68433" href="https://www.9ji.com/product/68433.html" class=" huanxin"><span>512GB</span></a></li>
+				                </ul>
+				            </div>
+				            <div class="yanse flex" id="proDiv">
+				                <span class="pz_tit">版　　本：</span>
+				                <ul class="ys_xuan flex flex-wrap">
+				                	<li><a data-id="68422" href="https://www.9ji.com/product/68422.html" title="iPhone XS" class="huanxin"><span>iPhone XS</span></a></li><li><a data-id="68430" href="https://www.9ji.com/product/68430.html" title="iPhone XS Max" class="yansecur huanxin"><span>iPhone XS Max</span></a></li><li><a data-id="58207" href="https://www.9ji.com/product/58207.html" title="iPhone X" class="huanxin"><span>iPhone X</span></a></li><li><a data-id="68438" href="https://www.9ji.com/product/68438.html" title="iPhone XR" class="huanxin"><span>iPhone XR</span></a></li>
+				                </ul>
+				            </div>
+				                
+				            <div class="yanse flex taocan-list">
+				                <span class="pz_tit flex-child-shrink">套　　餐：</span>
+				                <ul class="ys_xuan flex flex-wrap">
+				                    <li>
+				                        <a class="yansecur taocan-title" href="javascript:;" data-productid="0"><span>官方标配</span></a>
+				                    </li>
+				                    
+				                    <li>
+				                        <a class="taocan-title" href="javascript:;" tcid="3640" data-productid="35744" itemprice="0.00" pname="iPhone XS Max(A2104) 国行版金色 256GB "><span>原装快充套装</span></a>
+				                        <div class="taocan-detail" data-id="3640" data-pid="35744">
+				                            
+		                                    <a itemprice="369.0" data-ppid="65880" href="" title="苹果 原装 30W USB-C 电源适配器" target="_blank">
+		                                        <div class="taocan-item">
+		                                            <img src="" width="48" height="48" class="border margin-right">
+		                                            <span>苹果 原装 30W USB-C 电源适配器</span>
+		                                        </div>
+		                                    </a>
+				                            
+		                                    <a itemprice="130.0" data-ppid="58445" href="" title="苹果 USB-C 至 Lightning 原装连接线" target="_blank">
+		                                        <div class="taocan-item">
+		                                            <img src="" width="48" height="48" class="border margin-right">
+		                                            <span>苹果 USB-C 至 Lightning 原装连接线</span>
+		                                        </div>
+		                                    </a>
+		                            
+				                        </div>
+				                    </li>
+				                    
+				                    <li>
+				                        <a class="taocan-title" href="javascript:;" tcid="3647" data-productid="35744" itemprice="0.00" pname="iPhone XS Max(A2104) 国行版金色 256GB "><span>品牌快充套装</span></a>
+				                        <div class="taocan-detail" data-id="3647" data-pid="35744">
+				                            
+		                                    <a itemprice="89.0" data-ppid="67791" href="" title="TOTU 折叠 双口 PD+ QC3.0 快充充电器" target="_blank">
+		                                        <div class="taocan-item">
+		                                            <img src="" width="48" height="48" class="border margin-right">
+		                                            <span>TOTU 折叠 双口 PD+ QC3.0 快充充电器</span>
+		                                        </div>
+		                                    </a>
+		                            
+		                                    <a itemprice="130.0" data-ppid="58445" href="" title="苹果 USB-C 至 Lightning 原装连接线" target="_blank">
+		                                        <div class="taocan-item">
+		                                            <img src="" width="48" height="48" class="border margin-right">
+		                                            <span>苹果 USB-C 至 Lightning 原装连接线</span>
+		                                        </div>
+		                                    </a>
+				                            
+				                        </div>
+				                    </li>
+				                    
+				                    <li>
+				                        <a class="taocan-title" href="javascript:;" tcid="3652" data-productid="35744" itemprice="0.00" pname="iPhone XS Max(A2104) 国行版金色 256GB "><span>无线充电礼盒</span></a>
+				                        <div class="taocan-detail" data-id="3652" data-pid="35744">
+				                            
+		                                    <a itemprice="199.0" data-ppid="68107" href="" title="耐尔金 iPhone XS Max 无线充电精装礼盒三件套套装" target="_blank">
+		                                        <div class="taocan-item">
+		                                            <img src="" width="48" height="48" class="border margin-right">
+		                                            <span>耐尔金 iPhone XS Max 无线充电精装礼盒三件套套装</span>
+		                                        </div>
+		                                    </a>
+				                            
+				                        </div>
+				                    </li>
+				                    
+				                    <li>
+				                        <a class="taocan-title" href="javascript:;" tcid="3653" data-productid="35744" itemprice="0.00" pname="iPhone XS Max(A2104) 国行版金色 256GB "><span>壳膜套餐</span></a>
+				                        <div class="taocan-detail" data-id="3653" data-pid="35744">
+				                            
+				                            <a itemprice="189.0" data-ppid="68244" href="" title="乐物 iPhone XS Max 金钻系列 全屏3D钢化膜" target="_blank">
+				                                <div class="taocan-item">
+				                                    <img src="" width="48" height="48" class="border margin-right">
+				                                    <span>乐物 iPhone XS Max 金钻系列 全屏3D钢化膜</span>
+				                                </div>
+				                            </a>
+				                    
+				                            <a itemprice="199.0" data-ppid="68189" href="" title="苹果 iPhone XS Max 硅胶 定制 保护壳" target="_blank">
+				                                <div class="taocan-item">
+				                                    <img src="" width="48" height="48" class="border margin-right">
+				                                    <span>苹果 iPhone XS Max 硅胶 定制 保护壳</span>
+				                                </div>
+				                            </a>
+				                            
+				                        </div>
+				                    </li>
+				                                
+				                </ul>
+				            </div>
+				                
+				            <div id="prettyNumberPart" class="yanse flex"></div>
+				                
+
+				            
+				            <div class="gift-warp">
+				                <script id="gifts" type="text/html">
+				                    <div class="yanse flex" style="overflow:inherit; height:44px;">
+				                        <span class="pz_tit">赠　　品：</span>
+				                        <div class="gift-box">
+				                            {{if data.giftClass == 0}}
+				                            <div class="zp-box zp-sel">
+				                                {{each data.list as tc}}
+				                                    {{each tc.nameList as zp}}
+				                                        <a href="/product/{{zp.ppid}}.html" title="{{zp.name}}" target="_blank"><img src="{{zp.pic}}" width="32" /> x{{tc.count}} </a>
+				                                    {{/each}}
+				                                {{/each}}
+				                                <span class="grey-9 margin-left">（{{data.giftLable}}，{{data.giftMsg}}）</span>
+				                            </div>
+				                            {{else if data.giftClass == 1}}                      
+				                                {{if active}}
+				                                    <div class="zp-box zp-sel" onclick="showGift(0)">
+				                                    {{each active.nameList as zp}}
+				                                        <a href="/product/{{zp.ppid}}.html" class="margin-right" title="{{zp.name}}" target="_blank"><img src="{{zp.pic}}" width="32" /> x1</a>
+				                                    {{/each}}
+				                                    <span class="grey-9">（修改选择）</span>
+				                                    </div>
+				                                {{else}}
+				                                    <div class="zp-box" onclick="showGift(0)">选择赠品（共{{data.list.length}}个组合）</div>
+				                                {{/if}}
+				                            {{/if}}
+				                        </div>
+				                    </div>
+				                </script>
+				            </div>
+			                
+			    			<div class="dfengex"></div>
+			                
+			                <div style="overflow:hidden;">
+			                    <div class="kucun">
+			                        <div class="kczt">
+			                            <span>配 送 至：</span>
+			                            <div class="ps_info">
+			                                <b class="ck_kucun"><em id="kc_cityname">广东省广州市广州市区</em>（<small id="lblProductKcState">预订</small>）<i class="triangle-down"></i></b>
+			                                <div id="lblTextKcState" class="overflow-hide">从<i>昆明仓</i>发货,17:00前完成下单，预计3-7天送达，因配送地址不同，送达时间以订单显示为准</div>
+			                                <div class="daohuotz fl" id="daohuotz" style="padding: 5px 0px; display: none;margin-right: 10px"><a href="javascript:;" onclick=" dhtz(this, 68430) " style="color: #fff; height: 24px; line-height: 24px; background: #c80f1e; padding: 0 5px; border-radius: 3px; display: block;">到货通知</a></div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div style="height:34px;">
+			                    <div class="kucun" id="lblShop" style="display: none;">
+			                        <div class="kczt">
+			                            <span>门店自取：</span>
+			                            <b class="md_kucun"><small id="lblProductKcStateShop" style="margin-right: 4px;"></small><i class="triangle-down"></i></b>
+			                            <b class="cur_md_kucun hide"><a href="https://www.9ji.com/product/68430.html" id="currentShopLink"><em id="currentShopName"></em><em id="currentShopStock" class="main-color bold"></em></a></b>
+			                            <div class="md_kucunshow" id="lblShopList"></div>
+			                        </div>
+			                    </div>
+			                    <div class="clear"></div>
+			                </div>
+			                
+			            	<div class="dfengex"></div>  
+
+			            
+				            <div id="divServices" class="fuwu">
+				                <span>九机服务：</span>
+				                
+
+						        <style>
+						            .serverList { padding: 10px 25px; }
+						            .serverList li { line-height: 40px; padding:0 14px; font-size:14px; border:1px solid #ddd; margin: 15px 0; cursor:pointer;}
+						            .serverList li:hover { border:1px solid #ff6700; color:#ff6700; }
+						        </style>
+
+						        <div class="JiujiServer">
+						            <ul class="clearfix" id="jiuji-service-box">
+						            	<li class="fuwu-box">
+						            		<a href="javascript:;" class="btn-service" data-ppid="47359">
+						            			<img class="fw_icon" src="../images/201702200447040.png"><em style="margin-left:2px">电池保</em> <em class="service-year">2</em>年 ¥<em class="service-price">159</em>
+						            		</a>
+						            	</li>
+						            	<li class="fuwu-box">
+						            		<a href="javascript:;" class="btn-service" data-ppid="20603">
+						            			<img class="fw_icon" src="../images/201702200445310.png"><em style="margin-left:2px">延长保</em> <em class="service-year">1</em>年 ¥<em class="service-price">189</em>
+						            		</a>
+						            		<div class="fuwu-list-box">
+						            			<a href="javascript:;" class="btn-list-service" data-ppid="20603">延长保 <em class="service-year">1</em>年 ¥<em class="service-price">189</em>
+						            			</a>
+						            			<a href="javascript:;" class="btn-list-service" data-ppid="50009">延长保 <em class="service-year">2</em>年 ¥<em class="service-price">289</em>
+						            			</a>
+						            		</div>
+						            	</li>
+						            	<li class="fuwu-box">
+						            		<a href="javascript:;" class="btn-service" data-ppid="47365">
+						            			<img class="fw_icon" src="../images/201702200445560.png"><em style="margin-left:2px">碎屏保</em> <em class="service-year">1</em>年 ¥<em class="service-price">549</em>
+						            		</a>
+						            		<div class="fuwu-list-box">
+						            			<a href="javascript:;" class="btn-list-service" data-ppid="47365">碎屏保 <em class="service-year">1</em>年 ¥<em class="service-price">549</em></a><a href="javascript:;" class="btn-list-service" data-ppid="61029">碎屏保 <em class="service-year">2</em>年 ¥<em class="service-price">829</em>
+						            			</a>
+						            		</div>
+						            	</li>
+						            	<li class="fuwu-box">
+						            		<a href="javascript:;" class="btn-service" data-ppid="20599"><img class="fw_icon" src="../images/201702200444280.png"><em style="margin-left:2px">意外保</em> <em class="service-year">1</em>年 ¥<em class="service-price">699</em>
+						            		</a>
+						            		<div class="fuwu-list-box">
+						            			<a href="javascript:;" class="btn-list-service" data-ppid="20599">意外保 <em class="service-year">1</em>年 ¥<em class="service-price">699</em>
+						            			</a>
+						            			<a href="javascript:;" class="btn-list-service" data-ppid="20602">意外保 <em class="service-year">2</em>年 ¥<em class="service-price">999</em></a></div>
+						        		</li>
+						        		<li class="fuwu-box">
+						    				<a href="javascript:;" class="btn-service" data-ppid="60884">
+						    					<img class="fw_icon" src="../images/201702200445560.png"><em style="margin-left:2px">屏背保</em> <em class="service-year">1</em>年 ¥<em class="service-price">669</em>
+						    				</a>
+						    				<div class="fuwu-list-box">
+						    					<a href="javascript:;" class="btn-list-service" data-ppid="60884">屏背保 <em class="service-year">1</em>年 ¥<em class="service-price">669</em>
+						    					</a>
+						    					<a href="javascript:;" class="btn-list-service" data-ppid="66133">屏背保 <em class="service-year">2</em>年 ¥<em class="service-price">999</em>
+						    					</a>
+						    				</div>
+						    			</li>
+						    			<li class="fuwu-box">
+						    				<a href="javascript:;" class="btn-service" data-ppid="67776"><img class="fw_icon" src="../images/201702200445560.png"><em style="margin-left:2px">以换代修</em> <em class="service-year">2</em>年 ¥<em class="service-price">649</em>
+						    				</a>
+						    			</li>
+						    		</ul>
+						            <script id="Jiujiser" type="text/html"> 
+						                <ul class="clearfix">
+						                    {{each list as ser}}                
+						                        <li class="fuwu-box">
+						                            <a href="javascript:;" onclick="selServer(this, false)" {{each ser.list as year}}{{if curArr.indexOf(year.id) != -1}}class="active"{{/if}}  data-ppid="{{year.id}}" {{/each}}>
+						                                <img class="fw_icon" src="{{ser.img}}"> 
+						                                {{if ser.list[0].remark && ser.list[0].remark != "" }}
+						                                    <em style="margin-left:2px;" class="festival-mark">{{ser.list[0].remark}}</em>
+						                                {{/if}}
+						                                <em style="margin-left:2px">{{ser.title}}</em>
+						                                
+						                                {{if ser.list.length > 1}}
+						                                {{each ser.list as year}}
+						                                    {{if curArr.indexOf(year.id) != -1}} {{year.year}}年 ￥{{year.price}}{{/if}}
+						                                {{/each}}
+						                                {{else}}
+						                                    {{ser.list[0].year}}年 ￥{{ser.list[0].price}}
+						                                {{/if}}
+						                            </a>
+						                            {{if ser.list.length > 1}}
+						                            <div class="fuwu-list-box">
+						                                {{each ser.list as year}}
+						                                <a href="javascript:;" onclick="selServer(this, true)" {{if curArr.indexOf(year.id) != -1}} class="active"{{/if}} data-ppid="{{year.id}}">
+						                                    {{ser.title}}{{year.year}}年 ￥{{year.price}}
+						                                </a>
+						                                {{/each}}
+						                            </div>
+						                            {{/if}}
+						                        </li>
+						                    {{/each}}
+						                </ul>
+
+						                
+						                <div class="jiuji-service-pop" style="display:none;">
+						                    <div class="jiuji-service-head">{{list[eq].title}}服务{{active.year}}年<span>{{active.price}}</span> 元</div>
+						                    <div class="jiuji-service-view">
+						                        {{if active.id == 55428 || active.id == 60379}}
+						                        <ul class="img-box">
+						                            <li><img src="/static/images/order/jinshui1.png?v=2" width="100" /><span class="service-desc">意外进水</span></li>
+						                            <li><img src="/static/images/order/jinshui2.png?v=2" width="100" /><span class="service-desc">免费维修</span></li>
+						                            <li><img src="/static/images/order/jinshui3.png?v=2" width="100" /><span class="service-desc">置换服务</span></li>
+						                        </ul>
+						                        <h3>为保障您的权益，购买前请仔细阅读：</h3>
+						                        <ul>
+						                            <li><i></i>本进水保服务对象为无磕、碰、摔等无主观人为损坏的情况下，由于设备意外进水导致损坏的情况下提供一次<em class="red">（除主板外）</em>的免费维修或置换服务。</li>
+						                            <li><i></i>本保障服务自您收到手机起生效，有效期为{{active.year}}年，若您在收到手机7日内需要需要取消保障服务，请前往九机网门店进行处理。</li>
+						                            <li><i></i>非本公司授权售后进行拆机、维修或未根据生产商的使用说明进行使用和操作等造成的损坏不在本服务保障范围内（以九机网进水保服务条款为准）。</li>
+						                        </ul>
+						                        {{else if active.id == 20603 || active.id == 36398}}
+						                        <ul class="img-box">
+						                            <li><img src="/static/images/order/yanchang1.png?v=2" width="100" /><span class="service-desc">质保延长</span></li>
+						                            <li><img src="/static/images/order/yanchang2.png?v=2" width="100" /><span class="service-desc">免费维修</span></li>
+						                        </ul>
+						                        <h3>为保障您的权益，购买前请仔细阅读：</h3>
+						                        <ul>
+						                            <li><i></i>本延保服务对象为无磕、碰、摔、进液等无主观人为损坏的情况下，出现国家三包所列性能故障，对主机提供免费维修服务。</li>
+						                            <li><i></i>本保障服务自手机交易完成之日起满{{active.year}}年生效，有效期为{{active.year}}年。</li>
+						                            <li><i></i>若您需要取消保障服务，请在购买后7日内前往九机网门店进行处理。</li>
+						                            <li><i></i>服务期内绑定设备出现人为损坏、非本公司授权售后进行拆机/维修或未根据生产商的使用说明进行使用和操作损坏等不再享受延保服务保障范围（以九机网延保服务条款为准）。</li>
+						                        </ul>
+						                        {{else if active.id == 20599}}
+						                        <ul class="img-box">
+						                            <li><img src="/static/images/order/yiwai1.png?v=2" width="100" /><span class="service-desc">意外跌落</span></li>
+						                            <li><img src="/static/images/order/yiwai2.png?v=2" width="100" /><span class="service-desc">意外进水</span></li> 
+						                            <li><img src="/static/images/order/yiwai3.png?v=2" width="100" /><span class="service-desc">屏幕碎裂</span></li>   
+						                        </ul>
+						                        <h3>为保障您的权益，购买前请仔细阅读：</h3>
+						                        <ul>
+						                            <li><i></i>购买意外保后，投保产品符合意外保使用规则，您的设备将能获得一次免费意外损坏维修服务。</li>
+						                            <li><i></i>本意外保服务对象为在九机网购买的并且用于家庭或个人使用的全新原装正品手机及其他指定数码产品。</li>
+						                            <li><i></i>本保障服务手机交易完成三十日后生效，生效满十一个月到期。</li>
+						                            <li><i></i>若您需要取消保障服务，请在购买后7日内前往九机网门店进行处理。</li>
+						                            <li><i></i>非本公司授权售后进行拆机、维修或未根据生产商的使用说明进行使用和操作等不在意外保服务保障范围内（以九机网意外保服务条款为准）。</li>
+						                        </ul>                    
+						                        {{else if active.id == 47359}}
+						                        <ul class="img-box">
+						                            <li><img src="/static/images/order/dianchi.png?v=2" width="100" /><span class="service-desc">电池故障免费换新</span></li>
+						                        </ul>
+						                        <h3>为保障您的权益，购买前请仔细阅读：</h3>
+						                        <ul>
+						                            <li><i></i>本电池保服务对象为无私拆的情况下，出现电池性能故障，对电池提供一次免费更换服务。若手机需要更换电池时已经损坏，需先修复手机后在进行电池更换。</li>
+						                            <li><i></i>本保障服务自您手机交易完成第二日生效，有效期{{active.year}}年：</li>
+						                            <li>1.	购机后第一年如发生爆炸/自燃等电池故障导致手机损坏换新机；</li>
+						                            <li>2.	购机后第二年电池故障换新电池。</li>
+						                            <li>(1)	若您需要取消保障服务，请在购买后7日内前往九机网门店进行处理。</li>
+						                            <li>(2)	非本公司授权售后进行拆机、维修、更换等操作后，将不再想享受电池保服务保障（以九机网电池保服务条款为准）。</li>
+						                        </ul>
+						                        {{else if active.id == 47365}}
+						                        <ul class="img-box">
+						                            <li><img src="/static/images/order/suiping.png?v=2" width="100" /><span class="service-desc">碎屏免费维修</span></li>
+						                        </ul>
+						                        <h3>为保障您的权益，购买前请仔细阅读：</h3>
+						                        <ul>
+						                            <li><i></i>在服务期限内手机出现因意外导致屏幕破碎，对屏幕进行一次免费维修服务。</li>
+						                            <li><i></i>本次维修仅对无私拆、无进液的设别进行屏幕免费维修服务，如手机有其他零部件损坏需单独计费维修。</li>
+						                            <li><i></i>本保障服务自您手机交易完成三十日后生效，生效满十一个月失效。</li>
+						                            <li><i></i>若您需要取消保障服务，请在购买后7日内前往九机网门店进行处理。</li>
+						                            <li><i></i>非本公司授权售后进行拆机、维修、更换操作等不再享受碎屏保服务（以九机网碎屏服务条款为准）。</li>
+						                        </ul>
+						                        {{else}}
+						                        <ul class="img-box">
+						                            <li><img src="/static/images/order/banjiahuanxin1.png?v=2" width="100" /><span class="service-desc">半价回收保障</span></li>
+						                            <li><img src="/static/images/order/banjiahuanxin2.png?v=2" width="100" /><span class="service-desc">价格保值</span></li>    
+						                        </ul>
+						                        <h3>为保障您的权益，购买前请仔细阅读：</h3>
+						                        <ul>
+						                            <li><i></i>购买半价换新服务后，服务时间内绑定商品满足换新标准，我们将以该商品购买时订单金额的50%进行回收，回收款可在九机网购买任意商品。</li>
+						                            <li><i></i>本半价换新服务仅适用为在九机网购买的并且用于家庭或个人使用的全新原装正品手机及其他指定数码产品。</li>
+						                            <li><i></i>本服务自手机交易完成之日起第7个月初生效，有效时间至第13个月末</li>
+						                            <li><i></i>若您需要取消保障服务，请在购买后7日内前往九机网门店进行处理。</li>
+						                            <li><i></i>绑定设备服务非本公司授权售后进行拆机、维修、更换操作等不再享受半价换新服务（以九机网半价换新服务条款为准）。</li>
+						                        </ul>
+						                        {{/if}}
+						                        <a href="/help/{{active.articleId}}.html" target="_blank" style="color:#f60; font-size:14px; padding:15px 15px 0; display:block;">了解《九机网{{list[eq].title}}服务》详细条款></a>
+						                    </div>
+						                    <div class="jiuji-service-foot">
+						                        <span class="right"><a href="javascript:;" onclick="buyServer({{active.id}})" class="buy-service button">确认并购买{{list[eq].title}}服务</a><a href="javascript:;" onclick="layer.closeAll()" class="over">取消</a></span>
+						                        <label class="tip"><input class="J-service-check" type="checkbox" checked style="zoom:1.5; margin-right:8px; vertical-align:middle;" />我已阅读并同意《九机网{{list[eq].title}}服务条款》</label>
+						                    </div>
+						                </div>
+						            </script>
+						        </div> 
+						        <div style="color: #999; margin-left:70px;">据统计有46.7%的手机在质保期内会因为意外失去保修，为此60%以上九机网客户选择了九机服务 
+						        	<a href="https://www.9ji.com/event/736.html" target="_blank" style="border:0; float:right; padding-right: 0" class="a-link" title="查看九机服务详情">详情 <em style="font-family:SimSun; margin-left:4px;">&gt;</em>
+						        	</a>
+						        </div>
+				            </div>
+
+			             
+			            	<div class="yanse taocan-list flex" style="overflow:inherit; height:40px;display:none" id="divToHomeService">
+				                <span class="pz_tit">上门服务：</span>
+				                <div class="ToHomeServer">
+				                    <ul class="ys_xuan flex flex-wrap"></ul>
+				                </div>               
+			                
+			            	</div>
+
+			            
+			            
+			            
+
+				            <div class="return-tips" style="margin:10px 10px 10px 70px;">
+				              <!-- 7天无理由退货商品 -->
+				                
+
+				                <!-- 七天无理由（激活除外）商品 -->
+				                
+
+				                <!-- 不支持七天无理由的商品 -->
+				                
+				            </div>
+
+			            
+			                
+				            <div class="buy_btnbox">
+				                <a href="javascript:;" style="display:inline-block" id="toshop" class="add_gwc yuyuetips firstBtn">加入购物车</a>
+
+				                <div class="buy-in-shop">
+				                    <dl>
+				                        <dt>选择门店</dt>
+				                        <dd>
+				                            <input type="hidden" id="J-to-shop-id" value="1">
+				                            <div class="shop-info" id="J-to-shop-default">
+				                                <h3><b class="left">佰腾总店.KM</b><span class="left"></span><a href="javascript:;" class="right" onclick="changeShop()"><i class="icon refresh-icon"></i>更改选择</a></h3>
+				                                <p>地址：昆明市世纪城世纪金源商务中心1幢5楼</p>
+				                                <p>销售热线：0871-68393939</p>
+				                                <p>工作时间：9:00-21:30</p>
+				                            </div>
+				                        </dd>
+				                    </dl>
+				                    <dl>
+				                        <dt>到店时间</dt>
+				                        <dd id="appointDateTime">
+				                            <script type="text/html" id="appointShopTmpl">
+				                                <select id="J-to-shop-date" onchange="seltime(this)">
+				                                    {{each appoint.date.available as av}}
+				                                    <option value="{{av.value}}" {{if av.value==appoint.date.selected}}selected{{/if}}>{{av.string}}</option>
+				                                    {{/each}}
+				                                </select>
+				                                <select id="J-to-shop-time">
+				                                    <option value="">选择到店时间</option>
+				                                    {{each appoint.time.available as t}}
+				                                    <option value="{{t.value}}">{{t.string}}</option>
+				                                    {{/each}}
+				                                </select>
+				                            </script>
+				                        </dd>
+				                    </dl>
+				                    <dl>
+				                        <dt>手机号码</dt>
+				                        <dd>
+				                            <input type="text" id="J-to-shop-phone" placeholder="请输入手机号码"><em>手机号码将作为取机凭证哦</em>
+				                        </dd>
+				                    </dl>
+				                    <dl id="daogouspan" style="display:none">
+				                        <dt>导购员：</dt>
+				                        <dd>
+				                            <input type="text" id="J-to-shop-daogou"><em>选填</em>
+				                        </dd>
+				                    </dl>
+				                </div>
+
+				                <div class="change-shop hide">
+				                    <div class="change-shop-city-box">切换城市：<span class="change-shop-city">广东省 广州市 广州市区<i class="triangle-down"></i></span></div>
+				                    <div class="select-shop-box">
+				                        <script type="text/html" id="shopListTmpl">
+				                            {{each}}
+				                                <a href="javascript:;" onclick="setAppointShop({{$value.Id}},'{{$value.AreaName}}','{{$value.Address}}','{{$value.Tel}}','{{$value.Hours}}','{{$value.stock}}','{{$value.date}}','{{$value.Area}}')" class="shop-info">
+				                                    <h3><b class="left">{{$value.AreaName}}</b><span class="left {{$value.classname}}">{{$value.stock}}</span></h3>
+				                                    <p>地址：{{$value.Address}}</p>
+				                                    <p>销售热线：{{$value.Tel}}</p>
+				                                    <p>工作时间：{{$value.Hours}}</p>
+				                                </a>
+				                            {{/each}}
+				                        </script>
+				                    </div>
+				                </div>
+				                <div id="buyType">
+					
+				                    <a href="javascript:;" class="add_gwc" onclick="nowBuy()" ahref="/initCart.aspx?ppid=68430" ppid="68430" data-src="//img2.ch999img.com/pic/product/70x70/20180913061146641.jpg">立即购买</a> 
+				                
+				                </div>
+				                
+
+				                <a href="javascript:;" onclick="zhxj(68430)" class="add_gwc replace" id="replacenew">以旧换新</a>
+				           
+				                
+				            </div>
+			                
+			        	</div>
+					</div>
+			    </div>
+			</div>
+		</div>
+
+		<div id="links">
+			<div class="container">
+				<div class="promise">
+					<a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p0"></dt>
+			                <dd>
+			                    <h4>新九机 心生态</h4>
+			                    <p>全新九机 用心可见</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p1"></dt>
+			                <dd>
+			                    <h4>售假退一罚三</h4>
+			                    <p>我们承诺，只做正品</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="/e" target="_blank">
+			            <dl>
+			                <dt class="icon p2"></dt>
+			                <dd>
+			                    <h4>3小时极速达</h4>
+			                    <p>自建物流，直达客户</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p3"></dt>
+			                <dd>
+			                    <h4>上门快修</h4>
+			                    <p>线上预约维修，在线评估故障</p>
+			                </dd>
+			            </dl>
+			        </a>
+			        <a href="" target="_blank">
+			            <dl>
+			                <dt class="icon p4"></dt>
+			                <dd>
+			                    <h4>门店保障</h4>
+			                    <p>实体购物，更加安心</p>
+			                </dd>
+			            </dl>
+			        </a>
+				</div>
+
+				<div class="foot-help">
+		            <dl>
+		                <dt>新手指南</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">购物流程</a>
+		                    
+		                    <a href="">九机评测</a>
+		                    <a href="" rel="nofollow">积分计划</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>付款方式</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">支付方式</a>
+		                    <a href="" rel="nofollow">分期付款</a>
+		                    <a href="" rel="nofollow">网银在线支付</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>配送方式</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">到店自提</a>
+		                    <a href="" rel="nofollow">送货上门</a>
+		                    <a href="" rel="nofollow">快递运输</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>售后服务</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">九机手机保修条例</a>
+		                    <a href="" rel="nofollow">硬件维修及报价</a>
+		                    <a href="" rel="nofollow">延保/意外保服务</a>
+		                </dd>
+		            </dl>
+		            <dl>
+		                <dt>帮助中心</dt>
+		                <dd>
+		                    <a href="" rel="nofollow">常见问题解答</a>
+		                    <a href="" rel="nofollow">4G热点问题解答</a>
+		                    <a href="" rel="nofollow">交易条款</a>
+		                </dd>
+		            </dl>
+		            <dl class="foot-sns">
+		                <dt class="icon" ></dt>
+		                <dd>
+		                    <h4>九机网官方微信</h4>
+		                    <p>扫描二维码，即刻调戏小九，更多精彩活动等着你哦！</p>
+		                </dd>
+		                <dd class="wblink">
+		                    <a rel="nofollow" href="" target="_blank" class="xinlang"><i class="icon"></i>新浪微博</a>
+		                    <a rel="nofollow" href="" target="_blank" class="tengxun"><i class="icon"></i>九机贴吧</a>
+		                </dd>
+		            </dl>
+		    	</div>
+		    	
+			</div>
+		</div>
+
+		<div id="bottom">
+			<div class="container">
+		        <div class="foot_nav">
+
+		            <a href="" rel="nofollow">常见问题</a><i>|</i><a href="" rel="nofollow">供应商申请</a><i>|</i><a href="" rel="nofollow">配送方式</a><i>|</i><a href="" rel="nofollow">招聘信息</a><i>|</i><a href="" rel="nofollow">关于我们</a><i>|</i><a href="" rel="nofollow">联系我们</a><i>|</i><a href="">投诉建议</a><i>|</i><a href="">地区报价</a><i>|</i><a href="">加盟招商</a><i>|</i><a href="">IT服务</a>
+
+		        </div>
+		        <div class="copy">
+		            
+		            <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+		            
+		            <p>网站ICP备案号：<a rel="nofollow" href="//www.miibeian.gov.cn/" target="_blank">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; <a rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=53010202000261" target="_blank" >滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; </p>
+		            
+		            <p>Copyright © 2006 - 2018 九机网 All Rights Reserved</p>
+		            <p>云南九机信息技术有限公司版权所有</p>
+		        </div>
+		        <div class="bot-link">
+		            <a class="wangjian" href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank" style="background:#fff" title="中国互联网违法和不良信息举报中心">
+		            	<img src="../images/bot-link01.jpg" />
+		            </a>
+		            <a id="_pingansec_bottomimagelarge_shiming" href="http://si.trustutn.org/info?sn=309160601022242710319&certType=1">
+		            	<img src="../images/bot-link02.jpg" />
+		            </a>
+		            
+		            <a class="shiming" style="background:none;" key ="57479c9defbfb00a58d582f4"  logo_size="124x47"  logo_type="realname"  href="//www.anquan.org" >
+		            	<img src="../images/bot-link03.jpg" />
+		            </a>
+		            <a class="wangjian" href="https://www.9ji.com/event/2089.html" target="_blank" title="12315维权" alt="12315维权">
+		            	<img src="../images/bot-link04.jpg" />
+		            </a>
+		            <a class="wangjing" href="//www.yn.cyberpolice.cn/" target="_blank">
+		            	<img src="../images/bot-link05.jpg" />
+		            </a>
+		            <a href="https://www.landui.com/?9ji" target="_blank" title="IDC服务提供商">
+		            	<img src="../images/bot-link06.jpg" />
+		            </a>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>

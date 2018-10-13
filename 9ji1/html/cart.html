@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	
+    <link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/cart.css">
+	<script src="../lib/jquery-3.2.1.js"></script>
+	<!-- <script src="../js/common.js"></script> -->
+	<script src="../js/cart.js"></script>
+</head>
+<body>
+	<div id="cart">
+		<div id="top">
+			<div class="container clearfix">
+				<div class="location fl">
+					<i></i>
+				</div>
+				<div class="login fl">
+					<p>Hi，欢迎来九机！<a href="../html/login.html">登录</a><a href="../html/register.html">免费注册</a></p>
+				</div>
+				<ul class="menu fr">
+					<li>
+						<a href="#">个人中心<i></i></a>
+						<ul class="userCenter">
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的积分</a></li>
+							<li><a href="#">我的试用</a></li>
+							<li><a href="#">我的收藏</a></li>
+							<li><a href="#">我的咨询</a></li>
+							<li><a href="#">我的优惠券</a></li>
+							<li><a href="#">报修/退换货</a></li>
+						</ul>
+					</li>
+					<li><a href="#"><i></i>会员俱乐部</a></li>
+					<li><a href="#">帮助中心</a></li>
+					<li>
+						<a href="#"><i></i>客户端</a>
+						<dl class="appDown">
+				            <dt>
+				            	<a href="#">
+				            		<img src="../images/appdown.png" width="100" height="100" />
+				            	</a>
+				            	<span>扫描二维码下载</span>
+				            </dt>
+				            <dd>
+				                <a href="" target="_blank" title="下载安卓客户端">Android</a>
+				                <a href="" target="_blank" title="下载iPhone客户端">iPhone</a>
+				                <a href="" target="_blank" title="访问触屏版">触屏版</a>
+				            </dd>
+				        </dl>
+					</li>
+					<li><a href="#">在线客服</a></li>
+					<li>
+						<a href="#">网站导航<i></i></a>
+						<ul class="siteMap">
+			                <li class="character">
+			                    <h3>九机特色</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="">附近门店</a></li>
+			                        <li><a href="">一手优品</a></li>
+			                        <li><a href="">免费贴膜<i class="hot-icon"></i></a></li>
+			                        <li><a href="">旧机回收</a></li>
+			                        <li><a href="">预约维修</a></li>
+			                        <li><a href="">预约快修</a></li>
+			                        <li><a href="">九机小店</a></li>
+			                    </ul>
+			                </li>
+			                <li class="service">
+			                    <h3>服务集市</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">在线支付</a></li>
+			                        <li><a href="#">话费充值</a></li>
+			                        <li><a href="#">品牌专区</a></li>
+			                        <li><a href="#">试用中心</a></li>
+			                        <li><a href="#">帮助中心</a></li>
+			                        <li><a href="#">九机服务</a></li>
+			                        <li><a href="#">会员俱乐部<i class="hot-icon"></i></a></li>
+			                    </ul>
+			                </li>
+			                <li class="join">
+			                    <h3>招商合作</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">供应商申请</a></li>
+			                        <li><a href="#">IT服务</a></li>
+			                        <li><a href="#">九机百科</a></li>
+			                    </ul>
+			                </li>
+			                <li class="more">
+			                    <h3>更多精选</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">九机头条</a>
+			                        <li><a href="#">人才招聘</a>
+			                    </ul>
+			                </li>
+			                <li class="product">
+			                    <h3>产品选择</h3>
+			                    <ul class="fnav-list">
+			                        <li><a href="#">手机</a></li>
+			                        <li><a href="#">手机配件<i class="hot-icon"></i></a></li>
+			                        <li><a href="#">电脑周边</a></li>
+			                        <li><a href="#">耳机音响</a></li>
+			                        <li><a href="#">智能产品<i class="new-icon"></i></a></li>
+			                        <li><a href="#">笔记本/电脑</a></li>
+			                    </ul>
+			                </li>
+				        </ul>
+					</li>
+					<li><a href="#"><i></i>不良信息举报</a></li>
+					<li>
+						<a href="#"><i></i>400-008-3939</a>
+						<div class="freePhone">
+			            	<p>输入手机号码并<span>免费</span>拨打：</p><input type="text" id="freePhoneNum"/><input type="button" id="freePhoneBtn" value="拨打">
+			        	</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="header">
+			<div class="container" style="height: 145px;">
+				<div class="logoBox fl">
+					<h1><a href="../index.html" title="九机网">
+	                <img src="../images/logo.png" alt="九机网"/></a></h1>
+				</div>
+			</div>
+			
+		</div>
+		<div id="main">
+			<div class="container">
+				<div class="b-cart">
+	                <div class="b-cartList">
+	                    <div class="b-cart-box">
+	                    	<div>
+	                    		<div class="b-cart-tab">
+	                    			<div class="fl">
+	                    				<a href="javascript:;" style="color: #c80f1e">全部商品<span>shuliang</span></a>
+	                    			</div>
+	                    			<p class="fr">
+	                    				已选
+	                    				<span>jianshu</span>
+	                    				件，合计（不含运费）
+	                    				<b>jiage</b>
+	                    			</p>
+	                    		</div>
+	                    	</div>
+	                    	<div class="b-cart-item-parent">
+	             				<div class="b-cart-item b-cart-title">
+	             					<div class="b-cart-check">
+             						<label class="b-checkbox b-radio-box">
+             							<input type="checkbox" id="checkAll">全选</label>
+             						</div> 
+             						<div class="b-cart-product-box">
+             							<div class="b-product">商品</div> 
+             							<div class="b-unit-price">单价（元）</div> 
+             							<div class="b-discount">优惠（元）</div> 
+             							<div class="b-count">数量</div> 
+             							<div class="b-sum">小计（元）</div> 
+             							<div class="b-action">操作</div>
+             						</div>
+             					</div>
+             					<div class="b-cart-item">
+             						<div>
+             							<div class="b-cart-check">
+             								<label class="checkbox b-radio-box">
+             									<input type="checkbox">
+             								</label>
+             							</div> 
+             							<div class="b-cart-product-box">
+             								<div class="b-invalid-mark-"></div> 
+             								<div class="b-product">
+             									<a href="" target="_blank" class="fl b-pro-img-box">
+             										<img src="">
+             									</a>
+             									<div class="b-product-title">
+             										<h5>
+             											<a href="" target="_blank">iPhone XS (A2100) 国行版 银色 64GB 
+             											</a>
+             										</h5>
+             										<div style="margin-top:10px"></div> 
+             										<div class="b-jiuji-serviceCur"></div> 
+             										<div class="b-jiuji-server">
+             											<a href="javascript:;">
+             											<i class="b-baoxiu"></i>选服务
+	             										</a>
+	             									</div>
+	             								</div>
+	             							</div> 
+	             							<div class="b-unit-price">
+	             								<b>8450.00</b>
+	             							</div> 
+	             							<div class="b-discount">0.00</div> 
+	             							<div class="b-count">
+	             								<a href="javascript:;">-</a> 
+	             								<input type="text" disabled="disabled"> 
+	             								<a href="javascript:;">+</a>
+	             							</div> 
+	             							<div class="b-sum">
+	             								<b class="b-main-color">8450.00</b>
+	             							</div> 
+	             							<div class="b-action">
+	             								<a href="javascript:;" class="b-move-to-favorate">移入收藏夹</a> 
+	             								<a href="javascript:;">删除</a>
+	             							</div>
+	             						</div>
+	             					</div>
+	             				</div>
+	                    	</div>
+	                    	<div class="b-cart-total">
+    							<p>共<span></span>件商品，总计：<b>zongjia</b></p>
+    							<input type="button" value="结算">
+    						</div>
+	                    </div>
+	                </div>
+	            </div>  
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
